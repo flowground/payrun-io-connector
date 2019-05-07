@@ -1,0 +1,78 @@
+{
+    "type": "object",
+    "properties": {
+        "EmployerId": {
+            "required": true,
+            "type": "string"
+        },
+        "Authorization": {
+            "required": true,
+            "type": "string",
+            "format": "string",
+            "default": "Auto"
+        },
+        "requestBody": {
+            "properties": {
+                "CisLineType": {
+                    "properties": {
+                        "Description": {
+                            "description": "The cis line types' description",
+                            "title": "Description",
+                            "type": "string"
+                        },
+                        "LineType": {
+                            "description": "The cis line types' line type",
+                            "title": "LineType",
+                            "type": "string"
+                        },
+                        "NominalCode": {
+                            "description": "The cis line types' nominal code",
+                            "properties": {
+                                "_href": {
+                                    "description": "The links' href",
+                                    "title": "@href",
+                                    "type": "string"
+                                },
+                                "_rel": {
+                                    "description": "The links' target type",
+                                    "title": "@rel",
+                                    "type": "string"
+                                },
+                                "_title": {
+                                    "description": "The links' title",
+                                    "title": "@title",
+                                    "type": "string"
+                                }
+                            },
+                            "title": "NominalCode",
+                            "type": "object"
+                        },
+                        "TaxTreatment": {
+                            "description": "The cis line types' tax treatment",
+                            "enum": [
+                                "Taxable",
+                                "NonTaxable",
+                                "Notional",
+                                "Materials"
+                            ],
+                            "title": "TaxTreatment",
+                            "type": "string"
+                        }
+                    },
+                    "title": "CisLineType",
+                    "type": "object"
+                }
+            },
+            "type": "object",
+            "xml": {
+                "name": "CisLineType"
+            }
+        },
+        "Api_Version": {
+            "required": true,
+            "type": "string",
+            "format": "string",
+            "default": "default"
+        }
+    }
+}

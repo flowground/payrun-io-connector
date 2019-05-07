@@ -1,0 +1,44 @@
+{
+    "type": "object",
+    "properties": {
+        "EmployerKey": {
+            "required": true,
+            "type": "string"
+        },
+        "EmployeeKey": {
+            "required": true,
+            "type": "string"
+        },
+        "ActiveOn": {
+            "required": false,
+            "type": "string",
+            "format": "date"
+        },
+        "FromDate": {
+            "required": true,
+            "type": "string",
+            "format": "date"
+        },
+        "ToDate": {
+            "required": false,
+            "type": "string",
+            "format": "date"
+        },
+        "Type": {
+            "required": false,
+            "type": "string"
+        },
+        "Authorization": {
+            "required": true,
+            "type": "string",
+            "format": "string",
+            "default": "Auto"
+        },
+        "Api_Version": {
+            "required": true,
+            "type": "string",
+            "format": "string",
+            "default": "default"
+        }
+    }
+}

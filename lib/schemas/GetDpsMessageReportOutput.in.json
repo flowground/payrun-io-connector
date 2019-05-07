@@ -1,0 +1,47 @@
+{
+    "type": "object",
+    "properties": {
+        "EmployerKey": {
+            "required": true,
+            "type": "string"
+        },
+        "FromDate": {
+            "required": true,
+            "type": "string",
+            "format": "date"
+        },
+        "ToDate": {
+            "required": false,
+            "type": "string",
+            "format": "date"
+        },
+        "MessageTypes": {
+            "required": false,
+            "type": "string"
+        },
+        "MessageStatuses": {
+            "required": false,
+            "type": "string"
+        },
+        "StartIndex": {
+            "required": false,
+            "type": "string"
+        },
+        "MaxIndex": {
+            "required": false,
+            "type": "string"
+        },
+        "Authorization": {
+            "required": true,
+            "type": "string",
+            "format": "string",
+            "default": "Auto"
+        },
+        "Api_Version": {
+            "required": true,
+            "type": "string",
+            "format": "string",
+            "default": "default"
+        }
+    }
+}

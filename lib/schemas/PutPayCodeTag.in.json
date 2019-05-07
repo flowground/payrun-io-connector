@@ -1,0 +1,29 @@
+{
+    "type": "object",
+    "properties": {
+        "EmployerId": {
+            "required": true,
+            "type": "string"
+        },
+        "PayCodeId": {
+            "required": true,
+            "type": "string"
+        },
+        "TagId": {
+            "required": true,
+            "type": "string"
+        },
+        "Authorization": {
+            "required": true,
+            "type": "string",
+            "format": "string",
+            "default": "Auto"
+        },
+        "Api_Version": {
+            "required": true,
+            "type": "string",
+            "format": "string",
+            "default": "default"
+        }
+    }
+}

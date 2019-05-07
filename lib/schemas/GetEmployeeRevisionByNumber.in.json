@@ -1,0 +1,30 @@
+{
+    "type": "object",
+    "properties": {
+        "EmployerId": {
+            "required": true,
+            "type": "string"
+        },
+        "EmployeeId": {
+            "required": true,
+            "type": "string"
+        },
+        "RevisionNumber": {
+            "required": true,
+            "type": "string",
+            "format": "int32"
+        },
+        "Authorization": {
+            "required": true,
+            "type": "string",
+            "format": "string",
+            "default": "Auto"
+        },
+        "Api_Version": {
+            "required": true,
+            "type": "string",
+            "format": "string",
+            "default": "default"
+        }
+    }
+}

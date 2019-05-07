@@ -1,0 +1,175 @@
+{
+    "type": "object",
+    "properties": {
+        "Authorization": {
+            "required": true,
+            "type": "string",
+            "format": "string",
+            "default": "Auto"
+        },
+        "requestBody": {
+            "properties": {
+                "RtiJobInstruction": {
+                    "properties": {
+                        "EarlierTaxYear": {
+                            "description": "The rti job instructions' earlier tax year",
+                            "format": "int32",
+                            "title": "EarlierTaxYear",
+                            "type": "integer"
+                        },
+                        "Employer": {
+                            "description": "The rti job instructions' employer",
+                            "properties": {
+                                "_href": {
+                                    "description": "The links' href",
+                                    "title": "@href",
+                                    "type": "string"
+                                },
+                                "_rel": {
+                                    "description": "The links' target type",
+                                    "title": "@rel",
+                                    "type": "string"
+                                },
+                                "_title": {
+                                    "description": "The links' title",
+                                    "title": "@title",
+                                    "type": "string"
+                                }
+                            },
+                            "title": "Employer",
+                            "type": "object"
+                        },
+                        "FinalSubmissionForYear": {
+                            "description": "The rti job instructions' final submission for year",
+                            "title": "FinalSubmissionForYear",
+                            "type": "boolean"
+                        },
+                        "Generate": {
+                            "description": "The rti job instructions' generate",
+                            "title": "Generate",
+                            "type": "boolean"
+                        },
+                        "HoldingDate": {
+                            "description": "The rti job instructions' holding date",
+                            "format": "date-time",
+                            "title": "HoldingDate",
+                            "type": "string"
+                        },
+                        "LateReason": {
+                            "description": "The rti job instructions' late reason",
+                            "enum": [
+                                "A",
+                                "B",
+                                "C",
+                                "D",
+                                "F",
+                                "G",
+                                "H"
+                            ],
+                            "title": "LateReason",
+                            "type": "string"
+                        },
+                        "NoPaymentForPeriodFrom": {
+                            "description": "The rti job instructions' no payment for period from",
+                            "format": "date",
+                            "title": "NoPaymentForPeriodFrom",
+                            "type": "string"
+                        },
+                        "NoPaymentForPeriodTo": {
+                            "description": "The rti job instructions' no payment for period to",
+                            "format": "date",
+                            "title": "NoPaymentForPeriodTo",
+                            "type": "string"
+                        },
+                        "PaySchedule": {
+                            "description": "The rti job instructions' pay schedule",
+                            "properties": {
+                                "_href": {
+                                    "description": "The links' href",
+                                    "title": "@href",
+                                    "type": "string"
+                                },
+                                "_rel": {
+                                    "description": "The links' target type",
+                                    "title": "@rel",
+                                    "type": "string"
+                                },
+                                "_title": {
+                                    "description": "The links' title",
+                                    "title": "@title",
+                                    "type": "string"
+                                }
+                            },
+                            "title": "PaySchedule",
+                            "type": "object"
+                        },
+                        "PaymentDate": {
+                            "description": "The rti job instructions' payment date",
+                            "format": "date",
+                            "title": "PaymentDate",
+                            "type": "string"
+                        },
+                        "PeriodOfInactivityFrom": {
+                            "description": "The rti job instructions' period of inactivity from",
+                            "format": "date",
+                            "title": "PeriodOfInactivityFrom",
+                            "type": "string"
+                        },
+                        "PeriodOfInactivityTo": {
+                            "description": "The rti job instructions' period of inactivity to",
+                            "format": "date",
+                            "title": "PeriodOfInactivityTo",
+                            "type": "string"
+                        },
+                        "RtiType": {
+                            "description": "The rti job instructions' rti type",
+                            "title": "RtiType",
+                            "type": "string"
+                        },
+                        "SchemeCeased": {
+                            "description": "The rti job instructions' scheme ceased",
+                            "format": "date",
+                            "title": "SchemeCeased",
+                            "type": "string"
+                        },
+                        "TaxMonth": {
+                            "description": "The rti job instructions' tax month",
+                            "format": "int32",
+                            "title": "TaxMonth",
+                            "type": "integer"
+                        },
+                        "TaxYear": {
+                            "description": "The rti job instructions' tax year",
+                            "format": "int32",
+                            "title": "TaxYear",
+                            "type": "integer"
+                        },
+                        "Timestamp": {
+                            "description": "The rti job instructions' timestamp",
+                            "format": "date-time",
+                            "title": "Timestamp",
+                            "type": "string"
+                        },
+                        "Transmit": {
+                            "description": "The rti job instructions' transmit",
+                            "title": "Transmit",
+                            "type": "boolean"
+                        }
+                    },
+                    "title": "RtiJobInstruction",
+                    "type": "object"
+                }
+            },
+            "type": "object",
+            "xml": {
+                "name": "RtiJobInstruction"
+            }
+        },
+        "Api_Version": {
+            "required": true,
+            "type": "string",
+            "format": "string",
+            "default": "default"
+        }
+    }
+}

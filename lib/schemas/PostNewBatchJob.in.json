@@ -1,0 +1,62 @@
+{
+    "type": "object",
+    "properties": {
+        "Authorization": {
+            "required": true,
+            "type": "string",
+            "format": "string",
+            "default": "Auto"
+        },
+        "requestBody": {
+            "properties": {
+                "BatchJobInstruction": {
+                    "properties": {
+                        "HoldingDate": {
+                            "description": "The batch job instructions' holding date",
+                            "format": "date-time",
+                            "title": "HoldingDate",
+                            "type": "string"
+                        },
+                        "Instructions": {
+                            "description": "The batch job instructions' instructions",
+                            "properties": {
+                                "DELETE": {
+                                    "items": {
+                                        "properties": {
+                                            "@Href": {
+                                                "description": "The batch item bases' href",
+                                                "title": "@Href",
+                                                "type": "string"
+                                            }
+                                        },
+                                        "type": "object"
+                                    },
+                                    "type": "array"
+                                }
+                            },
+                            "title": "DELETE",
+                            "type": "object"
+                        },
+                        "ValidateOnly": {
+                            "description": "The batch job instructions' validate only",
+                            "title": "ValidateOnly",
+                            "type": "boolean"
+                        }
+                    },
+                    "title": "BatchJobInstruction",
+                    "type": "object"
+                }
+            },
+            "type": "object",
+            "xml": {
+                "name": "BatchJobInstruction"
+            }
+        },
+        "Api_Version": {
+            "required": true,
+            "type": "string",
+            "format": "string",
+            "default": "default"
+        }
+    }
+}

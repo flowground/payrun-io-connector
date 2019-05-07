@@ -1,0 +1,69 @@
+{
+    "type": "object",
+    "properties": {
+        "EmployerId": {
+            "required": true,
+            "type": "string"
+        },
+        "ReportingInstructionId": {
+            "required": true,
+            "type": "string"
+        },
+        "Authorization": {
+            "required": true,
+            "type": "string",
+            "format": "string",
+            "default": "Auto"
+        },
+        "requestBody": {
+            "properties": {
+                "ReportingInstruction": {
+                    "properties": {
+                        "EndDate": {
+                            "description": "The reporting instructions' end date",
+                            "format": "date",
+                            "title": "EndDate",
+                            "type": "string"
+                        },
+                        "StartDate": {
+                            "description": "The reporting instructions' start date",
+                            "format": "date",
+                            "title": "StartDate",
+                            "type": "string"
+                        },
+                        "TaxMonth": {
+                            "description": "The reporting instructions' tax month",
+                            "format": "int32",
+                            "title": "TaxMonth",
+                            "type": "integer"
+                        },
+                        "TaxYear": {
+                            "description": "The reporting instructions' tax year",
+                            "format": "int32",
+                            "title": "TaxYear",
+                            "type": "integer"
+                        },
+                        "Value": {
+                            "description": "The reporting instructions' value",
+                            "format": "double",
+                            "title": "Value",
+                            "type": "number"
+                        }
+                    },
+                    "title": "ReportingInstruction",
+                    "type": "object"
+                }
+            },
+            "type": "object",
+            "xml": {
+                "name": "ReportingInstruction"
+            }
+        },
+        "Api_Version": {
+            "required": true,
+            "type": "string",
+            "format": "string",
+            "default": "default"
+        }
+    }
+}

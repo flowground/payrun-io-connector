@@ -1,0 +1,71 @@
+{
+    "type": "object",
+    "properties": {
+        "TransformDefinitionId": {
+            "required": true,
+            "type": "string"
+        },
+        "Authorization": {
+            "required": true,
+            "type": "string",
+            "format": "string",
+            "default": "Auto"
+        },
+        "requestBody": {
+            "properties": {
+                "TransformDefinition": {
+                    "properties": {
+                        "ContentType": {
+                            "description": "The transform definitions' content type",
+                            "title": "ContentType",
+                            "type": "string"
+                        },
+                        "Definition": {
+                            "description": "The transform definitions' definition",
+                            "title": "Definition",
+                            "type": "string"
+                        },
+                        "DefinitionType": {
+                            "description": "The transform definitions' definition type",
+                            "title": "DefinitionType",
+                            "type": "string"
+                        },
+                        "Readonly": {
+                            "description": "The transform definitions' readonly",
+                            "title": "Readonly",
+                            "type": "boolean"
+                        },
+                        "SupportedReports": {
+                            "description": "The transform definitions' supported reports",
+                            "title": "SupportedReports",
+                            "type": "string"
+                        },
+                        "TaxYear": {
+                            "description": "The transform definitions' tax year",
+                            "format": "int32",
+                            "title": "TaxYear",
+                            "type": "integer"
+                        },
+                        "Title": {
+                            "description": "The transform definitions' title",
+                            "title": "Title",
+                            "type": "string"
+                        }
+                    },
+                    "title": "TransformDefinition",
+                    "type": "object"
+                }
+            },
+            "type": "object",
+            "xml": {
+                "name": "TransformDefinition"
+            }
+        },
+        "Api_Version": {
+            "required": true,
+            "type": "string",
+            "format": "string",
+            "default": "default"
+        }
+    }
+}

@@ -1,0 +1,5066 @@
+{
+    "title": "PayRun.IO",
+    "description": "Open, scableable, transparent payroll API.",
+    "docsUrl": "https://developer.test.payrun.io/docs",
+    "url": "https://api.apis.guru/v2/specs/payrun.io/19.20.2.90/swagger.json",
+    "envVars": {},
+    "credentials": {
+        "fields": {
+            "server": {
+                "label": "Server",
+                "viewClass": "SelectView",
+                "model": [
+                    "https://api.test.payrun.io/",
+                    "--- Custom URL"
+                ],
+                "required": true
+            },
+            "otherServer": {
+                "label": "Custom Server URL",
+                "viewClass": "TextFieldView"
+            }
+        }
+    },
+    "triggers": {
+        "startFlow": {
+            "main": "./lib/triggers/startFlow.js",
+            "type": "polling",
+            "title": "Start Flow",
+            "fields": {}
+        }
+    },
+    "actions": {
+        "DeleteEmployer": {
+            "main": "./lib/actions/DeleteEmployer.js",
+            "title": "Delete an Employer",
+            "description": "Delete the specified employer",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/DeleteEmployer.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetEmployer": {
+            "main": "./lib/actions/GetEmployer.js",
+            "title": "Gets the employer",
+            "description": "Get the specified employer object",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetEmployer.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "PatchEmployer": {
+            "main": "./lib/actions/PatchEmployer.js",
+            "title": "Patches the employer",
+            "description": "Patches the specified employer with the supplied values",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/PatchEmployer.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "PutEmployer": {
+            "main": "./lib/actions/PutEmployer.js",
+            "title": "Updates the Employer",
+            "description": "Updates the existing specified employer object",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/PutEmployer.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetCisLineTypeWithTag": {
+            "main": "./lib/actions/GetCisLineTypeWithTag.js",
+            "title": "Get CIS line types with tag",
+            "description": "Gets the CIS line types with the tag",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetCisLineTypeWithTag.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "DeleteCisLineType": {
+            "main": "./lib/actions/DeleteCisLineType.js",
+            "title": "Delete an CIS line type",
+            "description": "Delete the specified CIS line type",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/DeleteCisLineType.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetCisLineTypeFromEmployer": {
+            "main": "./lib/actions/GetCisLineTypeFromEmployer.js",
+            "title": "Get CIS line type from employer",
+            "description": "Gets the specified CIS line type from employer.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetCisLineTypeFromEmployer.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "PutCisLineTypeIntoEmployer": {
+            "main": "./lib/actions/PutCisLineTypeIntoEmployer.js",
+            "title": "Updates the CIS line type",
+            "description": "Updates the existing specified CIS line type object",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/PutCisLineTypeIntoEmployer.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "DeleteCisLineTypeTag": {
+            "main": "./lib/actions/DeleteCisLineTypeTag.js",
+            "title": "Delete CIS line type tag",
+            "description": "Deletes a tag from the CIS line type",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/DeleteCisLineTypeTag.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetTagFromCisLineType": {
+            "main": "./lib/actions/GetTagFromCisLineType.js",
+            "title": "Get CIS line type tag",
+            "description": "Gets the tag from the CIS line type",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetTagFromCisLineType.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "PutCisLineTypeTag": {
+            "main": "./lib/actions/PutCisLineTypeTag.js",
+            "title": "Insert CIS line type tag",
+            "description": "Inserts a new tag on the CIS line type",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/PutCisLineTypeTag.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetTagsFromCisLineType": {
+            "main": "./lib/actions/GetTagsFromCisLineType.js",
+            "title": "Get all tags from the CIS line type",
+            "description": "Gets all the tags from the CIS line type",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetTagsFromCisLineType.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetCisLineTypesFromEmployer": {
+            "main": "./lib/actions/GetCisLineTypesFromEmployer.js",
+            "title": "Get CIS line types from employer.",
+            "description": "Get links to all CIS line types for the specified employer.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetCisLineTypesFromEmployer.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "PostCisLineTypeIntoEmployer": {
+            "main": "./lib/actions/PostCisLineTypeIntoEmployer.js",
+            "title": "Create a new CIS line type",
+            "description": "Create a new CIS line type object",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/PostCisLineTypeIntoEmployer.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetCisLineTypesWithTag": {
+            "main": "./lib/actions/GetCisLineTypesWithTag.js",
+            "title": "Get CIS line types with tag",
+            "description": "Gets the CIS line type with the tag",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetCisLineTypesWithTag.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetAllCisLineTypeTags": {
+            "main": "./lib/actions/GetAllCisLineTypeTags.js",
+            "title": "Get all CIS line type tags",
+            "description": "Gets all the CIS line type tags",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetAllCisLineTypeTags.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "DeleteCisTransaction": {
+            "main": "./lib/actions/DeleteCisTransaction.js",
+            "title": "Delete the CIS transaction",
+            "description": "Deletes the specified CIS transaction",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/DeleteCisTransaction.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetCisTransactionFromEmployer": {
+            "main": "./lib/actions/GetCisTransactionFromEmployer.js",
+            "title": "Get the CIS transaction",
+            "description": "Returns the specified CIS transaction",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetCisTransactionFromEmployer.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetCisTransactionsFromEmployer": {
+            "main": "./lib/actions/GetCisTransactionsFromEmployer.js",
+            "title": "Get all CIS transactions for the employer",
+            "description": "Get links for all CIS transactions for the specified employer",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetCisTransactionsFromEmployer.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "DeleteDpsMessage": {
+            "main": "./lib/actions/DeleteDpsMessage.js",
+            "title": "Deletes the DPS message",
+            "description": "Deletes the DPS message",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/DeleteDpsMessage.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetDpsMessageFromEmployer": {
+            "main": "./lib/actions/GetDpsMessageFromEmployer.js",
+            "title": "Gets the DPS message",
+            "description": "Gets the DPS message",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetDpsMessageFromEmployer.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "PatchDpsMessage": {
+            "main": "./lib/actions/PatchDpsMessage.js",
+            "title": "Patches the DPS message",
+            "description": "Patches the specified DPS message with the supplied values",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/PatchDpsMessage.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetDpsMessagesFromEmployer": {
+            "main": "./lib/actions/GetDpsMessagesFromEmployer.js",
+            "title": "Gets the DPS messages",
+            "description": "Gets the DPS message links",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetDpsMessagesFromEmployer.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "DeleteEmployee": {
+            "main": "./lib/actions/DeleteEmployee.js",
+            "title": "Delete an Employee",
+            "description": "Delete the specified employee",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/DeleteEmployee.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetEmployeeFromEmployer": {
+            "main": "./lib/actions/GetEmployeeFromEmployer.js",
+            "title": "Get employee from employer",
+            "description": "Gets the specified employee from employer by employee code.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetEmployeeFromEmployer.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "PatchEmployee": {
+            "main": "./lib/actions/PatchEmployee.js",
+            "title": "Patches the employee",
+            "description": "Patches the specified employee with the supplied values",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/PatchEmployee.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "PutEmployeeIntoEmployer": {
+            "main": "./lib/actions/PutEmployeeIntoEmployer.js",
+            "title": "Updates the Employee",
+            "description": "Updates the existing specified employee object",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/PutEmployeeIntoEmployer.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "DeleteAEAssessment": {
+            "main": "./lib/actions/DeleteAEAssessment.js",
+            "title": "Delete auto enrolment assessment",
+            "description": "Deletes an existing auto enrolment assessment for the employee. Used to remove historical assessments",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/DeleteAEAssessment.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetAEAssessmentFromEmployee": {
+            "main": "./lib/actions/GetAEAssessmentFromEmployee.js",
+            "title": "Get the auto enrolment assessment",
+            "description": "Gets the auto enrolment assessment from the specified employee",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetAEAssessmentFromEmployee.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "PutNewAEAssessment": {
+            "main": "./lib/actions/PutNewAEAssessment.js",
+            "title": "Insert new auto enrolment assessment",
+            "description": "Creates a new auto enrolment assessment for the employee. Used to insert historical assessments",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/PutNewAEAssessment.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetAEAssessmentsFromEmployee": {
+            "main": "./lib/actions/GetAEAssessmentsFromEmployee.js",
+            "title": "Get the auto enrolment assessments",
+            "description": "Gets all auto enrolment assessments from the specified employee",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetAEAssessmentsFromEmployee.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "PostNewAEAssessment": {
+            "main": "./lib/actions/PostNewAEAssessment.js",
+            "title": "Insert new auto enrolment assessment",
+            "description": "Creates a new auto enrolment assessment for the employee. Used to insert historical assessments",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/PostNewAEAssessment.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetCommentariesFromEmployee": {
+            "main": "./lib/actions/GetCommentariesFromEmployee.js",
+            "title": "Get links to all commentaries for the specified employee",
+            "description": "Get links to all commentaries for the specified employee.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetCommentariesFromEmployee.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetCommentaryFromEmployee": {
+            "main": "./lib/actions/GetCommentaryFromEmployee.js",
+            "title": "Get commentary from employee",
+            "description": "Gets the specified commentary report from the employee",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetCommentaryFromEmployee.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetPayInstructionWithTag": {
+            "main": "./lib/actions/GetPayInstructionWithTag.js",
+            "title": "Get pay instructions with tag",
+            "description": "Gets the pay instructions with the tag",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetPayInstructionWithTag.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "DeletePayInstruction": {
+            "main": "./lib/actions/DeletePayInstruction.js",
+            "title": "Deletes a pay instruction",
+            "description": "Delete the specified pay instruction",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/DeletePayInstruction.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetPayInstructionFromEmployee": {
+            "main": "./lib/actions/GetPayInstructionFromEmployee.js",
+            "title": "Gets the specified pay instruction from the employee",
+            "description": "Returns the specified pay instruction from employee",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetPayInstructionFromEmployee.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "PatchPayInstruction": {
+            "main": "./lib/actions/PatchPayInstruction.js",
+            "title": "Sparse Update of a Pay Instruction",
+            "description": "Patches the specified pay instruction with the supplied values",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/PatchPayInstruction.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "PutPayInstruction": {
+            "main": "./lib/actions/PutPayInstruction.js",
+            "title": "Update a Pay Instruction",
+            "description": "Updates the existing specified pay instruction object",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/PutPayInstruction.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "DeletePayInstructionTag": {
+            "main": "./lib/actions/DeletePayInstructionTag.js",
+            "title": "Delete pay instruction tag",
+            "description": "Deletes a tag from the pay instruction",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/DeletePayInstructionTag.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetTagFromPayInstruction": {
+            "main": "./lib/actions/GetTagFromPayInstruction.js",
+            "title": "Get pay instruction tag",
+            "description": "Gets the tag from the pay instruction",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetTagFromPayInstruction.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "PutPayInstructionTag": {
+            "main": "./lib/actions/PutPayInstructionTag.js",
+            "title": "Insert pay instruction tag",
+            "description": "Inserts a new tag on the pay instruction",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/PutPayInstructionTag.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetTagsFromPayInstruction": {
+            "main": "./lib/actions/GetTagsFromPayInstruction.js",
+            "title": "Get all tags from the pay instruction",
+            "description": "Gets all the tags from the pay instruction",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetTagsFromPayInstruction.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetPayInstructionsFromEmployee": {
+            "main": "./lib/actions/GetPayInstructionsFromEmployee.js",
+            "title": "Gets the pay instructions from the specified employee",
+            "description": "Get links to all pay instructions for the specified employee",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetPayInstructionsFromEmployee.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "PostPayInstruction": {
+            "main": "./lib/actions/PostPayInstruction.js",
+            "title": "Creates a new Pay Instruction",
+            "description": "Creates a new pay instruction object",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/PostPayInstruction.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetPayInstructionsWithTag": {
+            "main": "./lib/actions/GetPayInstructionsWithTag.js",
+            "title": "Get pay instructions with tag",
+            "description": "Gets the pay instructions with the tag",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetPayInstructionsWithTag.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetAllPayInstructionTags": {
+            "main": "./lib/actions/GetAllPayInstructionTags.js",
+            "title": "Get all pay instruction tags",
+            "description": "Gets all the pay instruction tags",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetAllPayInstructionTags.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetPayLineWithTag": {
+            "main": "./lib/actions/GetPayLineWithTag.js",
+            "title": "Get pay lines with tag",
+            "description": "Gets the pay lines with the tag",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetPayLineWithTag.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetPayLineFromEmployee": {
+            "main": "./lib/actions/GetPayLineFromEmployee.js",
+            "title": "Gets the specified pay line from the employee",
+            "description": "Returns the specified pay line from employee",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetPayLineFromEmployee.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "DeletePayLineTag": {
+            "main": "./lib/actions/DeletePayLineTag.js",
+            "title": "Delete pay line tag",
+            "description": "Deletes a tag from the pay line",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/DeletePayLineTag.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetTagFromPayLine": {
+            "main": "./lib/actions/GetTagFromPayLine.js",
+            "title": "Get pay line tag",
+            "description": "Gets the tag from the pay line",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetTagFromPayLine.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "PutPayLineTag": {
+            "main": "./lib/actions/PutPayLineTag.js",
+            "title": "Insert pay line tag",
+            "description": "Inserts a new tag on the pay line",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/PutPayLineTag.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetTagsFromPayLine": {
+            "main": "./lib/actions/GetTagsFromPayLine.js",
+            "title": "Get all tags from the pay line",
+            "description": "Gets all the tags from the pay line",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetTagsFromPayLine.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetPayLinesFromEmployee": {
+            "main": "./lib/actions/GetPayLinesFromEmployee.js",
+            "title": "Gets the pay lines from the specified employee",
+            "description": "Get links to all pay lines for the specified employee",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetPayLinesFromEmployee.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetPayLinesWithTag": {
+            "main": "./lib/actions/GetPayLinesWithTag.js",
+            "title": "Get pay lines with tag",
+            "description": "Gets the pay line with the tag",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetPayLinesWithTag.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetAllPayLineTags": {
+            "main": "./lib/actions/GetAllPayLineTags.js",
+            "title": "Get all pay line tags",
+            "description": "Gets all the pay line tags",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetAllPayLineTags.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetPayRunsFromEmployee": {
+            "main": "./lib/actions/GetPayRunsFromEmployee.js",
+            "title": "Gets the pay runs from the employee",
+            "description": "Get links to all pay runs for the specified employee.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetPayRunsFromEmployee.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "DeleteEmployeeRevisionByNumber": {
+            "main": "./lib/actions/DeleteEmployeeRevisionByNumber.js",
+            "title": "Delete an Employee revision matching the specified revision number.",
+            "description": "Deletes the specified employee revision for the matching revision number",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/DeleteEmployeeRevisionByNumber.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetEmployeeRevisionByNumber": {
+            "main": "./lib/actions/GetEmployeeRevisionByNumber.js",
+            "title": "Gets the employee by revision number",
+            "description": "Get the employee revision matching the specified revision number",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetEmployeeRevisionByNumber.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetEmployeeRevisions": {
+            "main": "./lib/actions/GetEmployeeRevisions.js",
+            "title": "Get all employee revisions",
+            "description": "Gets links to all employee revisions",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetEmployeeRevisions.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "DeleteEmployeeTag": {
+            "main": "./lib/actions/DeleteEmployeeTag.js",
+            "title": "Delete employee tag",
+            "description": "Deletes a tag from the employee",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/DeleteEmployeeTag.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetTagFromEmployee": {
+            "main": "./lib/actions/GetTagFromEmployee.js",
+            "title": "Get employee tag",
+            "description": "Gets the tag from the employee",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetTagFromEmployee.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "PutEmployeeTag": {
+            "main": "./lib/actions/PutEmployeeTag.js",
+            "title": "Insert employee tag",
+            "description": "Inserts a new tag on the employee",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/PutEmployeeTag.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetTagFromEmployeeRevision": {
+            "main": "./lib/actions/GetTagFromEmployeeRevision.js",
+            "title": "Get employee revision tag",
+            "description": "Gets the tag from the employee revision",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetTagFromEmployeeRevision.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetTagsFromEmployee": {
+            "main": "./lib/actions/GetTagsFromEmployee.js",
+            "title": "Get all employee tags",
+            "description": "Gets all the tags from the employee",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetTagsFromEmployee.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetTagsFromEmployeeRevision": {
+            "main": "./lib/actions/GetTagsFromEmployeeRevision.js",
+            "title": "Get all employee revision tags",
+            "description": "Gets all the tags from the employee revision",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetTagsFromEmployeeRevision.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "DeleteEmployeeRevision": {
+            "main": "./lib/actions/DeleteEmployeeRevision.js",
+            "title": "Delete an Employee revision matching the specified revision date.",
+            "description": "Deletes the specified employee revision for the matching revision date",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/DeleteEmployeeRevision.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetEmployeeByEffectiveDate": {
+            "main": "./lib/actions/GetEmployeeByEffectiveDate.js",
+            "title": "Get employee by effective date.",
+            "description": "Returns the employee's state at the specified effective date.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetEmployeeByEffectiveDate.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetEmployeesFromEmployer": {
+            "main": "./lib/actions/GetEmployeesFromEmployer.js",
+            "title": "Get employees from employer.",
+            "description": "Get links to all employees for the specified employer.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetEmployeesFromEmployer.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "PostEmployeeIntoEmployer": {
+            "main": "./lib/actions/PostEmployeeIntoEmployer.js",
+            "title": "Create a new Employee",
+            "description": "Create a new employee object",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/PostEmployeeIntoEmployer.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetEmployeesWithTag": {
+            "main": "./lib/actions/GetEmployeesWithTag.js",
+            "title": "Get employees with tag",
+            "description": "Gets the employees with the tag",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetEmployeesWithTag.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetAllEmployeeTags": {
+            "main": "./lib/actions/GetAllEmployeeTags.js",
+            "title": "Get all employee tags",
+            "description": "Gets all the employee tags",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetAllEmployeeTags.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetEmployeesByEffectiveDate": {
+            "main": "./lib/actions/GetEmployeesByEffectiveDate.js",
+            "title": "Get employees from employer at a given effective date.",
+            "description": "Get links to all employees for the employer on specified effective date.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetEmployeesByEffectiveDate.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetHolidaySchemeWithTag": {
+            "main": "./lib/actions/GetHolidaySchemeWithTag.js",
+            "title": "Get holiday schemes with tag",
+            "description": "Gets the holiday schemes with the tag",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetHolidaySchemeWithTag.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "DeleteHolidayScheme": {
+            "main": "./lib/actions/DeleteHolidayScheme.js",
+            "title": "Delete an holiday scheme",
+            "description": "Delete the specified holiday scheme",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/DeleteHolidayScheme.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetHolidaySchemeFromEmployer": {
+            "main": "./lib/actions/GetHolidaySchemeFromEmployer.js",
+            "title": "Get holiday scheme from employer",
+            "description": "Gets the specified holiday scheme from employer.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetHolidaySchemeFromEmployer.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "PatchHolidayScheme": {
+            "main": "./lib/actions/PatchHolidayScheme.js",
+            "title": "Patches the holiday scheme",
+            "description": "Patches the specified holiday scheme with the supplied values",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/PatchHolidayScheme.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "PutHolidaySchemeIntoEmployer": {
+            "main": "./lib/actions/PutHolidaySchemeIntoEmployer.js",
+            "title": "Updates the holiday scheme",
+            "description": "Updates the existing specified holiday scheme object",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/PutHolidaySchemeIntoEmployer.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "DeleteHolidaySchemeRevisionByNumber": {
+            "main": "./lib/actions/DeleteHolidaySchemeRevisionByNumber.js",
+            "title": "Delete an HolidayScheme revision matching the specified revision number.",
+            "description": "Deletes the specified holiday scheme revision for the matching revision number",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/DeleteHolidaySchemeRevisionByNumber.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetHolidaySchemeRevisionByNumber": {
+            "main": "./lib/actions/GetHolidaySchemeRevisionByNumber.js",
+            "title": "Gets the holiday scheme revision by revision number",
+            "description": "Get the holiday scheme revision matching the specified revision number",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetHolidaySchemeRevisionByNumber.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetHolidaySchemeRevisions": {
+            "main": "./lib/actions/GetHolidaySchemeRevisions.js",
+            "title": "Get all holiday scheme revisions",
+            "description": "Gets links to all the holiday scheme revisions",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetHolidaySchemeRevisions.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "DeleteHolidaySchemeTag": {
+            "main": "./lib/actions/DeleteHolidaySchemeTag.js",
+            "title": "Delete holiday scheme tag",
+            "description": "Deletes a tag from the holiday scheme",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/DeleteHolidaySchemeTag.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetTagFromHolidayScheme": {
+            "main": "./lib/actions/GetTagFromHolidayScheme.js",
+            "title": "Get holiday scheme tag",
+            "description": "Gets the tag from the holiday scheme",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetTagFromHolidayScheme.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "PutHolidaySchemeTag": {
+            "main": "./lib/actions/PutHolidaySchemeTag.js",
+            "title": "Insert holiday scheme tag",
+            "description": "Inserts a new tag on the holiday scheme",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/PutHolidaySchemeTag.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetTagFromHolidaySchemeRevision": {
+            "main": "./lib/actions/GetTagFromHolidaySchemeRevision.js",
+            "title": "Get holiday scheme revision tag",
+            "description": "Gets the tag from the holiday scheme revision",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetTagFromHolidaySchemeRevision.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetTagsFromHolidayScheme": {
+            "main": "./lib/actions/GetTagsFromHolidayScheme.js",
+            "title": "Get all tags from the holiday scheme",
+            "description": "Gets all the tags from the holiday scheme",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetTagsFromHolidayScheme.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetTagsFromHolidaySchemeRevision": {
+            "main": "./lib/actions/GetTagsFromHolidaySchemeRevision.js",
+            "title": "Get all holiday scheme revision tags",
+            "description": "Gets all the tags from the holiday scheme revision",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetTagsFromHolidaySchemeRevision.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "DeleteHolidaySchemeRevision": {
+            "main": "./lib/actions/DeleteHolidaySchemeRevision.js",
+            "title": "Delete an holiday scheme revision matching the specified revision date.",
+            "description": "Deletes the specified holiday scheme revision for the matching revision date",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/DeleteHolidaySchemeRevision.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetHolidaySchemeByEffectiveDate": {
+            "main": "./lib/actions/GetHolidaySchemeByEffectiveDate.js",
+            "title": "Get holiday scheme by effective date.",
+            "description": "Returns the holiday scheme's state at the specified effective date.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetHolidaySchemeByEffectiveDate.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetHolidaySchemesFromEmployer": {
+            "main": "./lib/actions/GetHolidaySchemesFromEmployer.js",
+            "title": "Get holiday schemes from employer.",
+            "description": "Get links to all holiday schemes for the specified employer.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetHolidaySchemesFromEmployer.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "PostHolidaySchemeIntoEmployer": {
+            "main": "./lib/actions/PostHolidaySchemeIntoEmployer.js",
+            "title": "Create a new holiday scheme",
+            "description": "Create a new holiday scheme object",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/PostHolidaySchemeIntoEmployer.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetHolidaySchemesWithTag": {
+            "main": "./lib/actions/GetHolidaySchemesWithTag.js",
+            "title": "Get holiday schemes with tag",
+            "description": "Gets the holiday scheme with the tag",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetHolidaySchemesWithTag.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetAllHolidaySchemeTags": {
+            "main": "./lib/actions/GetAllHolidaySchemeTags.js",
+            "title": "Get all holiday scheme tags",
+            "description": "Gets all the holiday scheme tags",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetAllHolidaySchemeTags.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetHolidaySchemesByEffectiveDate": {
+            "main": "./lib/actions/GetHolidaySchemesByEffectiveDate.js",
+            "title": "Get holiday schemes from employer at a given effective date.",
+            "description": "Get links to all holiday schemes for the employer on specified effective date.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetHolidaySchemesByEffectiveDate.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "DeleteNominalCode": {
+            "main": "./lib/actions/DeleteNominalCode.js",
+            "title": "Deletes the nominal codes",
+            "description": "Deletes the nominal code",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/DeleteNominalCode.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetNominalCodeFromEmployer": {
+            "main": "./lib/actions/GetNominalCodeFromEmployer.js",
+            "title": "Gets the nominal code",
+            "description": "Gets the nominal code",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetNominalCodeFromEmployer.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "PutNominalCode": {
+            "main": "./lib/actions/PutNominalCode.js",
+            "title": "Insert nominal code",
+            "description": "Inserts a new nominal code at the specified resource location",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/PutNominalCode.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetPayCodesFromNominalCode": {
+            "main": "./lib/actions/GetPayCodesFromNominalCode.js",
+            "title": "Gets the pay codes by nominal code",
+            "description": "Get the pay codes that share the specified nominal code",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetPayCodesFromNominalCode.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetNominalCodesFromEmployer": {
+            "main": "./lib/actions/GetNominalCodesFromEmployer.js",
+            "title": "Gets the nominal codes",
+            "description": "Gets the nominal code links",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetNominalCodesFromEmployer.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "PostNominalCode": {
+            "main": "./lib/actions/PostNominalCode.js",
+            "title": "Insert nominal code",
+            "description": "Inserts a new nominal code",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/PostNominalCode.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "DeletePayCode": {
+            "main": "./lib/actions/DeletePayCode.js",
+            "title": "Deletes a pay code",
+            "description": "Delete the specified pay code",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/DeletePayCode.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetPayCodeFromEmployer": {
+            "main": "./lib/actions/GetPayCodeFromEmployer.js",
+            "title": "Gets the specified pay code from the employer",
+            "description": "Returns the specified pay code from the employer",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetPayCodeFromEmployer.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "PatchPayCode": {
+            "main": "./lib/actions/PatchPayCode.js",
+            "title": "Patches the pay code",
+            "description": "Patches the specified pay code object with the supplied values",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/PatchPayCode.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "PutPayCode": {
+            "main": "./lib/actions/PutPayCode.js",
+            "title": "Updates a pay code",
+            "description": "Updates the existing specified pay code object",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/PutPayCode.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "DeletePayCodeRevisionByNumber": {
+            "main": "./lib/actions/DeletePayCodeRevisionByNumber.js",
+            "title": "Delete an PayCode revision matching the specified revision number.",
+            "description": "Deletes the specified pay code revision for the matching revision number",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/DeletePayCodeRevisionByNumber.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetPayCodeRevisionByNumber": {
+            "main": "./lib/actions/GetPayCodeRevisionByNumber.js",
+            "title": "Gets the pay code by revision number",
+            "description": "Get the pay code revision matching the specified revision number",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetPayCodeRevisionByNumber.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetPayCodeRevisions": {
+            "main": "./lib/actions/GetPayCodeRevisions.js",
+            "title": "Get all revisions of the Pay Code",
+            "description": "Returns links to all revisions of the pay code",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetPayCodeRevisions.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "DeletePayCodeTag": {
+            "main": "./lib/actions/DeletePayCodeTag.js",
+            "title": "Delete pay code tag",
+            "description": "Deletes a tag from the pay code",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/DeletePayCodeTag.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetTagFromPayCode": {
+            "main": "./lib/actions/GetTagFromPayCode.js",
+            "title": "Get pay code tag",
+            "description": "Gets the tag from the pay code",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetTagFromPayCode.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "PutPayCodeTag": {
+            "main": "./lib/actions/PutPayCodeTag.js",
+            "title": "Insert pay code tag",
+            "description": "Inserts a new tag on the pay code",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/PutPayCodeTag.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetTagsFromPayCode": {
+            "main": "./lib/actions/GetTagsFromPayCode.js",
+            "title": "Get all pay code tags",
+            "description": "Gets all the tags from the pay code",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetTagsFromPayCode.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "DeletePayCodeRevision": {
+            "main": "./lib/actions/DeletePayCodeRevision.js",
+            "title": "Deletes a pay code revision",
+            "description": "Delete the pay code revision for the specified date",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/DeletePayCodeRevision.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetPayCodeByEffectiveDate": {
+            "main": "./lib/actions/GetPayCodeByEffectiveDate.js",
+            "title": "Gets pay code for specified date",
+            "description": "Gets the pay code revision for the specified effective date",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetPayCodeByEffectiveDate.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetPayCodesFromEmployer": {
+            "main": "./lib/actions/GetPayCodesFromEmployer.js",
+            "title": "Gets the pay codes from the employer",
+            "description": "Get links to all the pay codes for the specified employer",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetPayCodesFromEmployer.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "PostPayCode": {
+            "main": "./lib/actions/PostPayCode.js",
+            "title": "Create a new pay code",
+            "description": "Create a new pay code object",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/PostPayCode.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetPayCodesWithTag": {
+            "main": "./lib/actions/GetPayCodesWithTag.js",
+            "title": "Get pay codes with tag",
+            "description": "Gets the pay codes with the tag",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetPayCodesWithTag.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetAllPayCodeTags": {
+            "main": "./lib/actions/GetAllPayCodeTags.js",
+            "title": "Get all pay code tags",
+            "description": "Gets all the pay code tags",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetAllPayCodeTags.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetPayCodesByEffectiveDate": {
+            "main": "./lib/actions/GetPayCodesByEffectiveDate.js",
+            "title": "Gets all pay codes for specified date",
+            "description": "Gets the effective pay code revision for the specified date",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetPayCodesByEffectiveDate.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "DeletePaySchedule": {
+            "main": "./lib/actions/DeletePaySchedule.js",
+            "title": "Deletes a pay schedule",
+            "description": "Delete the specified pay schedule",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/DeletePaySchedule.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetPayScheduleFromEmployer": {
+            "main": "./lib/actions/GetPayScheduleFromEmployer.js",
+            "title": "Gets the specified pay schedule from the employer",
+            "description": "Returns the specified pay schedule object from employer",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetPayScheduleFromEmployer.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "PutPaySchedule": {
+            "main": "./lib/actions/PutPaySchedule.js",
+            "title": "Updates a pay schedule",
+            "description": "Updates the existing specified pay schedule object",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/PutPaySchedule.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetEmployeesFromPaySchedule": {
+            "main": "./lib/actions/GetEmployeesFromPaySchedule.js",
+            "title": "Get all employees revisions from a pay schedule.",
+            "description": "Gets links to all employee revisions that have ever existed in the specified pay schedule.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetEmployeesFromPaySchedule.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetEmployeesFromPayScheduleOnEffectiveDate": {
+            "main": "./lib/actions/GetEmployeesFromPayScheduleOnEffectiveDate.js",
+            "title": "Get employees from a pay schedule on effective date.",
+            "description": "Gets links to all employee revisions in the specified pay schedule for the given effective date.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetEmployeesFromPayScheduleOnEffectiveDate.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "DeletePayRun": {
+            "main": "./lib/actions/DeletePayRun.js",
+            "title": "Deletes a pay run",
+            "description": "Delete the specified pay run",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/DeletePayRun.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetPayRunFromPaySchedule": {
+            "main": "./lib/actions/GetPayRunFromPaySchedule.js",
+            "title": "Gets the pay run from the pay schedule",
+            "description": "Returns the pay run from the pay schedule",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetPayRunFromPaySchedule.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetAEAssessmentsFromPayRun": {
+            "main": "./lib/actions/GetAEAssessmentsFromPayRun.js",
+            "title": "Get the auto enrolment assessments",
+            "description": "Gets all auto enrolment assessments from the specified pay run",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetAEAssessmentsFromPayRun.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetCommentariesFromPayRun": {
+            "main": "./lib/actions/GetCommentariesFromPayRun.js",
+            "title": "Get links to all commentaries for the specified pay run",
+            "description": "Get links to all commentaries for the specified pay run.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetCommentariesFromPayRun.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "DeletePayRunEmployee": {
+            "main": "./lib/actions/DeletePayRunEmployee.js",
+            "title": "Deletes a pay run employee",
+            "description": "Delete pay run results for a single employee",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/DeletePayRunEmployee.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetEmployeesFromPayRun": {
+            "main": "./lib/actions/GetEmployeesFromPayRun.js",
+            "title": "Get employees from the pay run",
+            "description": "Gets links to all employees included in the specified pay run.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetEmployeesFromPayRun.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetReportLinesFromPayRun": {
+            "main": "./lib/actions/GetReportLinesFromPayRun.js",
+            "title": "Gets the report lines from the specified pay run",
+            "description": "Returns all report lines associated with the specified pay run",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetReportLinesFromPayRun.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "DeletePayRunTag": {
+            "main": "./lib/actions/DeletePayRunTag.js",
+            "title": "Delete pay run tag",
+            "description": "Deletes a tag from the pay run",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/DeletePayRunTag.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetTagFromPayRun": {
+            "main": "./lib/actions/GetTagFromPayRun.js",
+            "title": "Get pay run tag",
+            "description": "Gets the tag from the pay run",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetTagFromPayRun.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "PutPayRunTag": {
+            "main": "./lib/actions/PutPayRunTag.js",
+            "title": "Insert pay run tag",
+            "description": "Inserts a new tag on the pay run",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/PutPayRunTag.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetTagsFromPayRun": {
+            "main": "./lib/actions/GetTagsFromPayRun.js",
+            "title": "Get all pay run tags",
+            "description": "Gets all the tags from the pay run",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetTagsFromPayRun.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetPayRunsFromPaySchedule": {
+            "main": "./lib/actions/GetPayRunsFromPaySchedule.js",
+            "title": "Gets the pay runs from the pay schedule",
+            "description": "Get links to all pay runs for the specified pay schedule",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetPayRunsFromPaySchedule.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetPayRunsWithTag": {
+            "main": "./lib/actions/GetPayRunsWithTag.js",
+            "title": "Get pay runs with tag",
+            "description": "Gets the pay runs with the tag",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetPayRunsWithTag.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetAllPayRunTags": {
+            "main": "./lib/actions/GetAllPayRunTags.js",
+            "title": "Get all pay run tags",
+            "description": "Gets all the pay run tags",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetAllPayRunTags.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "DeletePayScheduleTag": {
+            "main": "./lib/actions/DeletePayScheduleTag.js",
+            "title": "Delete pay schedule tag",
+            "description": "Deletes a tag from the pay schedule",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/DeletePayScheduleTag.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetTagFromPaySchedule": {
+            "main": "./lib/actions/GetTagFromPaySchedule.js",
+            "title": "Get pay schedule tag",
+            "description": "Gets the tag from the pay schedule",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetTagFromPaySchedule.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "PutPayScheduleTag": {
+            "main": "./lib/actions/PutPayScheduleTag.js",
+            "title": "Insert pay schedule tag",
+            "description": "Inserts a new tag on the pay schedule",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/PutPayScheduleTag.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetTagsFromPaySchedule": {
+            "main": "./lib/actions/GetTagsFromPaySchedule.js",
+            "title": "Get all pay schedule tags",
+            "description": "Gets all the tags from the pay schedule",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetTagsFromPaySchedule.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetPaySchedulesFromEmployer": {
+            "main": "./lib/actions/GetPaySchedulesFromEmployer.js",
+            "title": "Gets the pay schedule from the specified employer",
+            "description": "Get links to all pay schedules for the specified employer",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetPaySchedulesFromEmployer.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "PostPaySchedule": {
+            "main": "./lib/actions/PostPaySchedule.js",
+            "title": "Create a new pay schedule",
+            "description": "Create a new pay schedule object",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/PostPaySchedule.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetPaySchedulesWithTag": {
+            "main": "./lib/actions/GetPaySchedulesWithTag.js",
+            "title": "Get pay schedule with tag",
+            "description": "Gets the pay schedules with the tag",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetPaySchedulesWithTag.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetAllPayScheduleTags": {
+            "main": "./lib/actions/GetAllPayScheduleTags.js",
+            "title": "Get all pay schedule tags",
+            "description": "Gets all the pay schedule tags",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetAllPayScheduleTags.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "DeletePension": {
+            "main": "./lib/actions/DeletePension.js",
+            "title": "Delete a Pension",
+            "description": "Delete the specified ppension",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/DeletePension.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetPensionFromEmployer": {
+            "main": "./lib/actions/GetPensionFromEmployer.js",
+            "title": "Get pension from employer",
+            "description": "Gets the specified pension from employer by pension code.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetPensionFromEmployer.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "PatchPension": {
+            "main": "./lib/actions/PatchPension.js",
+            "title": "Patches the pension",
+            "description": "Patches the specified pension with the supplied values",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/PatchPension.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "PutPensionIntoEmployer": {
+            "main": "./lib/actions/PutPensionIntoEmployer.js",
+            "title": "Updates the Pension",
+            "description": "Updates existing or inserts the specified pension object",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/PutPensionIntoEmployer.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "DeletePensionRevisionByNumber": {
+            "main": "./lib/actions/DeletePensionRevisionByNumber.js",
+            "title": "Delete an Pension revision matching the specified revision number.",
+            "description": "Deletes the specified pension revision for the matching revision number",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/DeletePensionRevisionByNumber.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetPensionRevisionByNumber": {
+            "main": "./lib/actions/GetPensionRevisionByNumber.js",
+            "title": "Gets the pension by revision number",
+            "description": "Get the pension revision matching the specified revision number",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetPensionRevisionByNumber.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetPensionRevisions": {
+            "main": "./lib/actions/GetPensionRevisions.js",
+            "title": "Get all pension revisions",
+            "description": "Returns links to all revisions of the pension",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetPensionRevisions.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "DeletePensionRevision": {
+            "main": "./lib/actions/DeletePensionRevision.js",
+            "title": "Delete an Pension revision matching the specified revision date.",
+            "description": "Deletes the specified pension revision for the matching revision date",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/DeletePensionRevision.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetPensionByEffectiveDate": {
+            "main": "./lib/actions/GetPensionByEffectiveDate.js",
+            "title": "Get pension by effective date.",
+            "description": "Returns the penion's state at the specified effective date.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetPensionByEffectiveDate.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetPensionsFromEmployer": {
+            "main": "./lib/actions/GetPensionsFromEmployer.js",
+            "title": "Get pensions from employer.",
+            "description": "Get links to all pensions for the specified employer.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetPensionsFromEmployer.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "PostPensionIntoEmployer": {
+            "main": "./lib/actions/PostPensionIntoEmployer.js",
+            "title": "Create a new Pension",
+            "description": "Create a new pension object",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/PostPensionIntoEmployer.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetPensionsByEffectiveDate": {
+            "main": "./lib/actions/GetPensionsByEffectiveDate.js",
+            "title": "Get pensions from employer at a given effective date.",
+            "description": "Get links to all pensions for the employer on specified effective date.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetPensionsByEffectiveDate.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetReportLineFromEmployer": {
+            "main": "./lib/actions/GetReportLineFromEmployer.js",
+            "title": "Gets the specified report line from the employer",
+            "description": "Returns the specified pay line from employee",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetReportLineFromEmployer.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetReportLinesFromEmployer": {
+            "main": "./lib/actions/GetReportLinesFromEmployer.js",
+            "title": "Gets the report lines from the specified employer",
+            "description": "Get links to all report lines for the specified employee",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetReportLinesFromEmployer.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "DeleteReportingInstruction": {
+            "main": "./lib/actions/DeleteReportingInstruction.js",
+            "title": "Deletes a reporting instruction",
+            "description": "Delete the specified reporting instruction",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/DeleteReportingInstruction.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetReportingInstructionFromEmployer": {
+            "main": "./lib/actions/GetReportingInstructionFromEmployer.js",
+            "title": "Gets the specified reporting instruction from the employer",
+            "description": "Returns the specified pay instruction from employee",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetReportingInstructionFromEmployer.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "PutReportingInstruction": {
+            "main": "./lib/actions/PutReportingInstruction.js",
+            "title": "Update a reporting Instruction",
+            "description": "Updates the existing specified reporting instruction object",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/PutReportingInstruction.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetReportingInstructionsFromEmployer": {
+            "main": "./lib/actions/GetReportingInstructionsFromEmployer.js",
+            "title": "Gets the reporting instructions from the specified employer",
+            "description": "Get links to all pay instructions for the specified employee",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetReportingInstructionsFromEmployer.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "PostReportingInstruction": {
+            "main": "./lib/actions/PostReportingInstruction.js",
+            "title": "Creates a new Reporting Instruction",
+            "description": "Creates a new reporting instruction object",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/PostReportingInstruction.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "DeleteEmployerRevisionByNumber": {
+            "main": "./lib/actions/DeleteEmployerRevisionByNumber.js",
+            "title": "Delete an Employer revision matching the specified revision number.",
+            "description": "Deletes the specified employer revision for the matching revision number",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/DeleteEmployerRevisionByNumber.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetEmployerRevisionByNumber": {
+            "main": "./lib/actions/GetEmployerRevisionByNumber.js",
+            "title": "Gets the employer by revision number",
+            "description": "Get the employer revision matching the specified revision number",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetEmployerRevisionByNumber.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetEmployerRevisions": {
+            "main": "./lib/actions/GetEmployerRevisions.js",
+            "title": "Gets the employer revisions",
+            "description": "Gets links to all the employer revisions",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetEmployerRevisions.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "DeleteRtiTransaction": {
+            "main": "./lib/actions/DeleteRtiTransaction.js",
+            "title": "Delete the RTI transaction",
+            "description": "Deletes the specified RTI transaction",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/DeleteRtiTransaction.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetRtiTransactionFromEmployer": {
+            "main": "./lib/actions/GetRtiTransactionFromEmployer.js",
+            "title": "Get the RTI transaction",
+            "description": "Returns the specified RTI transaction",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetRtiTransactionFromEmployer.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "DeleteRtiTransactionTag": {
+            "main": "./lib/actions/DeleteRtiTransactionTag.js",
+            "title": "Delete RTI transaction tag",
+            "description": "Deletes a tag from the RTI transaction",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/DeleteRtiTransactionTag.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetTagFromRtiTransaction": {
+            "main": "./lib/actions/GetTagFromRtiTransaction.js",
+            "title": "Get RTI transaction tag",
+            "description": "Gets the tag from the RTI transaction",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetTagFromRtiTransaction.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "PutRtiTransactionTag": {
+            "main": "./lib/actions/PutRtiTransactionTag.js",
+            "title": "Insert RTI transaction tag",
+            "description": "Inserts a new tag on the RTI transaction",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/PutRtiTransactionTag.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetTagsFromRtiTransaction": {
+            "main": "./lib/actions/GetTagsFromRtiTransaction.js",
+            "title": "Get all tags from RTI transaction",
+            "description": "Gets all the tags from the RTI transaction",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetTagsFromRtiTransaction.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetRtiTransactionsFromEmployer": {
+            "main": "./lib/actions/GetRtiTransactionsFromEmployer.js",
+            "title": "Get all RTI transactions for the employer",
+            "description": "Get links for all RTI transactions for the specified employer",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetRtiTransactionsFromEmployer.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetRtiTransactionsWithTag": {
+            "main": "./lib/actions/GetRtiTransactionsWithTag.js",
+            "title": "Get RTI transactions with tag",
+            "description": "Gets the RTI transactions with the tag",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetRtiTransactionsWithTag.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetAllRtiTransactionTags": {
+            "main": "./lib/actions/GetAllRtiTransactionTags.js",
+            "title": "Get all RTI transaction tags",
+            "description": "Gets all the RTI transaction tags",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetAllRtiTransactionTags.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetSubContractorWithTag": {
+            "main": "./lib/actions/GetSubContractorWithTag.js",
+            "title": "Get sub contractors with tag",
+            "description": "Gets the sub contractors with the tag",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetSubContractorWithTag.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "DeleteSubContractor": {
+            "main": "./lib/actions/DeleteSubContractor.js",
+            "title": "Delete an sub contractor",
+            "description": "Delete the specified sub contractor",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/DeleteSubContractor.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetSubContractorFromEmployer": {
+            "main": "./lib/actions/GetSubContractorFromEmployer.js",
+            "title": "Get sub contractor from employer",
+            "description": "Gets the specified sub contractor from employer.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetSubContractorFromEmployer.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "PatchSubContractor": {
+            "main": "./lib/actions/PatchSubContractor.js",
+            "title": "Patches the sub contractor",
+            "description": "Patches the specified sub contractor with the supplied values",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/PatchSubContractor.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "PutSubContractorIntoEmployer": {
+            "main": "./lib/actions/PutSubContractorIntoEmployer.js",
+            "title": "Updates the sub contractor",
+            "description": "Updates the existing specified sub contractor object",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/PutSubContractorIntoEmployer.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetCisInstructionWithTag": {
+            "main": "./lib/actions/GetCisInstructionWithTag.js",
+            "title": "Get CIS instructions with tag",
+            "description": "Gets the CIS instructions with the tag",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetCisInstructionWithTag.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "DeleteCisInstruction": {
+            "main": "./lib/actions/DeleteCisInstruction.js",
+            "title": "Delete a CIS instruction",
+            "description": "Delete the specified CIS instruction",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/DeleteCisInstruction.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetCisInstructionFromSubContractor": {
+            "main": "./lib/actions/GetCisInstructionFromSubContractor.js",
+            "title": "Get CIS instruction from sub contractor",
+            "description": "Gets the specified CIS instruction from sub contractor.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetCisInstructionFromSubContractor.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "PatchCisInstruction": {
+            "main": "./lib/actions/PatchCisInstruction.js",
+            "title": "Patches the CIS instruction",
+            "description": "Update an existing CIS instruction object",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/PatchCisInstruction.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "PutCisInstructionIntoSubContractor": {
+            "main": "./lib/actions/PutCisInstructionIntoSubContractor.js",
+            "title": "Updates the CIS instruction",
+            "description": "Insert or update existing CIS instruction object",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/PutCisInstructionIntoSubContractor.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "DeleteCisInstructionTag": {
+            "main": "./lib/actions/DeleteCisInstructionTag.js",
+            "title": "Delete CIS instruction tag",
+            "description": "Deletes a tag from the CIS instruction",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/DeleteCisInstructionTag.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetTagFromCisInstruction": {
+            "main": "./lib/actions/GetTagFromCisInstruction.js",
+            "title": "Get CIS instruction tag",
+            "description": "Gets the tag from the CIS instruction",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetTagFromCisInstruction.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "PutCisInstructionTag": {
+            "main": "./lib/actions/PutCisInstructionTag.js",
+            "title": "Insert CIS instruction tag",
+            "description": "Inserts a new tag on the CIS instruction",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/PutCisInstructionTag.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetTagsFromCisInstruction": {
+            "main": "./lib/actions/GetTagsFromCisInstruction.js",
+            "title": "Get all tags from the CIS instruction",
+            "description": "Gets all the tags from the CIS instruction",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetTagsFromCisInstruction.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetCisInstructionsFromSubContractor": {
+            "main": "./lib/actions/GetCisInstructionsFromSubContractor.js",
+            "title": "Get CIS instructions from sub contractor.",
+            "description": "Get links to all CIS instructions for the specified sub contractor.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetCisInstructionsFromSubContractor.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "PostCisInstructionIntoSubContractor": {
+            "main": "./lib/actions/PostCisInstructionIntoSubContractor.js",
+            "title": "Create a new CIS instruction",
+            "description": "Create a new CIS instruction object",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/PostCisInstructionIntoSubContractor.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetCisInstructionsWithTag": {
+            "main": "./lib/actions/GetCisInstructionsWithTag.js",
+            "title": "Get CIS instructions with tag",
+            "description": "Gets the CIS instruction with the tag",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetCisInstructionsWithTag.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetAllCisInstructionTags": {
+            "main": "./lib/actions/GetAllCisInstructionTags.js",
+            "title": "Get all CIS instruction tags",
+            "description": "Gets all the CIS instruction tags",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetAllCisInstructionTags.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetCisLineWithTag": {
+            "main": "./lib/actions/GetCisLineWithTag.js",
+            "title": "Get CIS lines with tag",
+            "description": "Gets the CIS lines with the tag",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetCisLineWithTag.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "DeleteCisLine": {
+            "main": "./lib/actions/DeleteCisLine.js",
+            "title": "Delete a CIS line",
+            "description": "Delete the specified CIS line",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/DeleteCisLine.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetCisLineFromSubContractor": {
+            "main": "./lib/actions/GetCisLineFromSubContractor.js",
+            "title": "Get CIS line from sub contractor",
+            "description": "Gets the specified CIS line from sub contractor.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetCisLineFromSubContractor.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "DeleteCisLineTag": {
+            "main": "./lib/actions/DeleteCisLineTag.js",
+            "title": "Delete CIS line tag",
+            "description": "Deletes a tag from the CIS line",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/DeleteCisLineTag.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetTagFromCisLine": {
+            "main": "./lib/actions/GetTagFromCisLine.js",
+            "title": "Get CIS line tag",
+            "description": "Gets the tag from the CIS line",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetTagFromCisLine.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "PutCisLineTag": {
+            "main": "./lib/actions/PutCisLineTag.js",
+            "title": "Insert CIS line tag",
+            "description": "Inserts a new tag on the CIS line",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/PutCisLineTag.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetTagsFromCisLine": {
+            "main": "./lib/actions/GetTagsFromCisLine.js",
+            "title": "Get all tags from the CIS line",
+            "description": "Gets all the tags from the CIS line",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetTagsFromCisLine.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetCisLinesFromSubContractor": {
+            "main": "./lib/actions/GetCisLinesFromSubContractor.js",
+            "title": "Get CIS lines from sub contractor.",
+            "description": "Get links to all CIS lines for the specified sub contractor.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetCisLinesFromSubContractor.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetCisLinesWithTag": {
+            "main": "./lib/actions/GetCisLinesWithTag.js",
+            "title": "Get CIS lines with tag",
+            "description": "Gets the CIS line with the tag",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetCisLinesWithTag.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetAllCisLineTags": {
+            "main": "./lib/actions/GetAllCisLineTags.js",
+            "title": "Get all CIS line tags",
+            "description": "Gets all the CIS line tags",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetAllCisLineTags.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "DeleteSubContractorRevisionByNumber": {
+            "main": "./lib/actions/DeleteSubContractorRevisionByNumber.js",
+            "title": "Delete an SubContractor revision matching the specified revision number.",
+            "description": "Deletes the specified sub contractor revision for the matching revision number",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/DeleteSubContractorRevisionByNumber.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetSubContractorRevisionByNumber": {
+            "main": "./lib/actions/GetSubContractorRevisionByNumber.js",
+            "title": "Gets the sub contractor by revision number",
+            "description": "Get the sub contractor revision matching the specified revision number",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetSubContractorRevisionByNumber.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetSubContractorRevisions": {
+            "main": "./lib/actions/GetSubContractorRevisions.js",
+            "title": "Get all sub contractor revisions",
+            "description": "Gets links to all the sub contractor revisions",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetSubContractorRevisions.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "DeleteSubContractorTag": {
+            "main": "./lib/actions/DeleteSubContractorTag.js",
+            "title": "Delete sub contractor tag",
+            "description": "Deletes a tag from the sub contractor",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/DeleteSubContractorTag.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetTagFromSubContractor": {
+            "main": "./lib/actions/GetTagFromSubContractor.js",
+            "title": "Get sub contractor tag",
+            "description": "Gets the tag from the sub contractor",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetTagFromSubContractor.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "PutSubContractorTag": {
+            "main": "./lib/actions/PutSubContractorTag.js",
+            "title": "Insert sub contractor tag",
+            "description": "Inserts a new tag on the sub contractor",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/PutSubContractorTag.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetTagFromSubContractorRevision": {
+            "main": "./lib/actions/GetTagFromSubContractorRevision.js",
+            "title": "Get sub contractor revision tag",
+            "description": "Gets the tag from the sub contractor revision",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetTagFromSubContractorRevision.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetTagsFromSubContractor": {
+            "main": "./lib/actions/GetTagsFromSubContractor.js",
+            "title": "Get all tags from the sub contractor",
+            "description": "Gets all the tags from the sub contractor",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetTagsFromSubContractor.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetTagsFromSubContractorRevision": {
+            "main": "./lib/actions/GetTagsFromSubContractorRevision.js",
+            "title": "Get all sub contractor revision tags",
+            "description": "Gets all the tags from the sub contractor revision",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetTagsFromSubContractorRevision.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "DeleteSubContractorRevision": {
+            "main": "./lib/actions/DeleteSubContractorRevision.js",
+            "title": "Delete an sub contractor revision matching the specified revision date.",
+            "description": "Deletes the specified sub contractor revision for the matching revision date",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/DeleteSubContractorRevision.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetSubContractorByEffectiveDate": {
+            "main": "./lib/actions/GetSubContractorByEffectiveDate.js",
+            "title": "Get sub contractor by effective date.",
+            "description": "Returns the sub contractor's state at the specified effective date.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetSubContractorByEffectiveDate.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetSubContractorsFromEmployer": {
+            "main": "./lib/actions/GetSubContractorsFromEmployer.js",
+            "title": "Get sub contractors from employer.",
+            "description": "Get links to all sub contractors for the specified employer.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetSubContractorsFromEmployer.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "PostSubContractorIntoEmployer": {
+            "main": "./lib/actions/PostSubContractorIntoEmployer.js",
+            "title": "Create a new sub contractor",
+            "description": "Create a new sub contractor object",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/PostSubContractorIntoEmployer.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetSubContractorsWithTag": {
+            "main": "./lib/actions/GetSubContractorsWithTag.js",
+            "title": "Get sub contractors with tag",
+            "description": "Gets the sub contractor with the tag",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetSubContractorsWithTag.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetAllSubContractorTags": {
+            "main": "./lib/actions/GetAllSubContractorTags.js",
+            "title": "Get all sub contractor tags",
+            "description": "Gets all the sub contractor tags",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetAllSubContractorTags.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetSubContractorsByEffectiveDate": {
+            "main": "./lib/actions/GetSubContractorsByEffectiveDate.js",
+            "title": "Get sub contractors from employer at a given effective date.",
+            "description": "Get links to all sub contractors for the employer on specified effective date.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetSubContractorsByEffectiveDate.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "DeleteEmployerTag": {
+            "main": "./lib/actions/DeleteEmployerTag.js",
+            "title": "Delete employer tag",
+            "description": "Deletes a tag from the employer",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/DeleteEmployerTag.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetTagFromEmployer": {
+            "main": "./lib/actions/GetTagFromEmployer.js",
+            "title": "Get employer tag",
+            "description": "Gets the tag from the employer",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetTagFromEmployer.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "PutEmployerTag": {
+            "main": "./lib/actions/PutEmployerTag.js",
+            "title": "Insert employer tag",
+            "description": "Inserts a new tag on the employer",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/PutEmployerTag.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetTagFromEmployerRevision": {
+            "main": "./lib/actions/GetTagFromEmployerRevision.js",
+            "title": "Get employer revision tag",
+            "description": "Gets the tag from the employer revision",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetTagFromEmployerRevision.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetTagsFromEmployer": {
+            "main": "./lib/actions/GetTagsFromEmployer.js",
+            "title": "Get all employer tags",
+            "description": "Gets all the tags from the employer",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetTagsFromEmployer.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetTagsFromEmployerRevision": {
+            "main": "./lib/actions/GetTagsFromEmployerRevision.js",
+            "title": "Get all employer revision tags",
+            "description": "Gets all the tags from the employer revision",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetTagsFromEmployerRevision.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "DeleteEmployerRevision": {
+            "main": "./lib/actions/DeleteEmployerRevision.js",
+            "title": "Delete an Employer revision matching the specified revision date.",
+            "description": "Deletes the specified employer revision for the matching revision date",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/DeleteEmployerRevision.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetEmployerByEffectiveDate": {
+            "main": "./lib/actions/GetEmployerByEffectiveDate.js",
+            "title": "Gets the employer at the specified effective",
+            "description": "Returns the employer's state at the specified effective date.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetEmployerByEffectiveDate.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetEmployers": {
+            "main": "./lib/actions/GetEmployers.js",
+            "title": "Gets all employers",
+            "description": "Gets links to all employers contained under the authorised application scope",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetEmployers.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "PostEmployer": {
+            "main": "./lib/actions/PostEmployer.js",
+            "title": "Create a new Employer",
+            "description": "Create a new employer object",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/PostEmployer.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetEmployersWithTag": {
+            "main": "./lib/actions/GetEmployersWithTag.js",
+            "title": "Get employers with tag",
+            "description": "Gets the employers with the tag",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetEmployersWithTag.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetAllEmployerTags": {
+            "main": "./lib/actions/GetAllEmployerTags.js",
+            "title": "Get all employer tags",
+            "description": "Gets all the employer tags",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetAllEmployerTags.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetEmployersByEffectiveDate": {
+            "main": "./lib/actions/GetEmployersByEffectiveDate.js",
+            "title": "Gets all employers at the specified effective date",
+            "description": "Gets links to all employers contained under the authorised application scope for the specified effective date.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetEmployersByEffectiveDate.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetHealthCheck": {
+            "main": "./lib/actions/GetHealthCheck.js",
+            "title": "Get health check status",
+            "description": "Returns the health status of the application",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetHealthCheck.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetBatchJobs": {
+            "main": "./lib/actions/GetBatchJobs.js",
+            "title": "Get all Batch jobs",
+            "description": "Gets all the Batch jobs",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetBatchJobs.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "PostNewBatchJob": {
+            "main": "./lib/actions/PostNewBatchJob.js",
+            "title": "Create new Batch job",
+            "description": "Adds a new Batch job to the queue and returns the job info",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/PostNewBatchJob.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "DeleteBatchJob": {
+            "main": "./lib/actions/DeleteBatchJob.js",
+            "title": "Delete the Batch job",
+            "description": "Deletes the the Batch job",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/DeleteBatchJob.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetBatchJobInfo": {
+            "main": "./lib/actions/GetBatchJobInfo.js",
+            "title": "Get the Batch job information",
+            "description": "Return the the Batch job information",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetBatchJobInfo.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetBatchJobProgress": {
+            "main": "./lib/actions/GetBatchJobProgress.js",
+            "title": "Get the Batch job progress",
+            "description": "Return the the Batch job progress",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetBatchJobProgress.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetBatchJobStatus": {
+            "main": "./lib/actions/GetBatchJobStatus.js",
+            "title": "Get the Batch job status",
+            "description": "Return the the Batch job status",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetBatchJobStatus.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetCisJobs": {
+            "main": "./lib/actions/GetCisJobs.js",
+            "title": "Get all CIS jobs",
+            "description": "Gets all the CIS jobs",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetCisJobs.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "PostNewCisJob": {
+            "main": "./lib/actions/PostNewCisJob.js",
+            "title": "Create new CIS job",
+            "description": "Adds a new CIS job to the queue and returns the job info",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/PostNewCisJob.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "DeleteCisJob": {
+            "main": "./lib/actions/DeleteCisJob.js",
+            "title": "Delete the CIS job",
+            "description": "Deletes the the CIS job",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/DeleteCisJob.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetCisJobInfo": {
+            "main": "./lib/actions/GetCisJobInfo.js",
+            "title": "Get the CIS job information",
+            "description": "Return the the CIS job information",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetCisJobInfo.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetCisJobProgress": {
+            "main": "./lib/actions/GetCisJobProgress.js",
+            "title": "Get the CIS job progress",
+            "description": "Return the the CIS job progress",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetCisJobProgress.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetCisJobStatus": {
+            "main": "./lib/actions/GetCisJobStatus.js",
+            "title": "Get the CIS job status",
+            "description": "Return the the CIS job status",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetCisJobStatus.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetDpsJobs": {
+            "main": "./lib/actions/GetDpsJobs.js",
+            "title": "Get all DPS jobs",
+            "description": "Gets all the DPS jobs",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetDpsJobs.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "PostNewDpsJob": {
+            "main": "./lib/actions/PostNewDpsJob.js",
+            "title": "Create new DPS job",
+            "description": "Creates the new DPS job to the queue and returns the job info",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/PostNewDpsJob.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "DeleteDpsJob": {
+            "main": "./lib/actions/DeleteDpsJob.js",
+            "title": "Delete the DPS job",
+            "description": "Deletes the the DPS job",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/DeleteDpsJob.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetDpsJobInfo": {
+            "main": "./lib/actions/GetDpsJobInfo.js",
+            "title": "Get the DPS job information",
+            "description": "Return the the DPS job information",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetDpsJobInfo.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetDpsJobProgress": {
+            "main": "./lib/actions/GetDpsJobProgress.js",
+            "title": "Get the DPS job progress",
+            "description": "Return the the DPS job progress",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetDpsJobProgress.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetDpsJobStatus": {
+            "main": "./lib/actions/GetDpsJobStatus.js",
+            "title": "Get the DPS job status",
+            "description": "Return the the DPS job status",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetDpsJobStatus.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetPayRunJobs": {
+            "main": "./lib/actions/GetPayRunJobs.js",
+            "title": "Get all PayRun jobs",
+            "description": "Gets all the pay run jobs",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetPayRunJobs.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "PostNewPayRunJob": {
+            "main": "./lib/actions/PostNewPayRunJob.js",
+            "title": "Create new PayRun job",
+            "description": "Creates the new pay run job to the queue and returns the job info",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/PostNewPayRunJob.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "DeletePayRunJob": {
+            "main": "./lib/actions/DeletePayRunJob.js",
+            "title": "Delete the pay run job",
+            "description": "Deletes the the payrun job",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/DeletePayRunJob.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetPayRunJobInfo": {
+            "main": "./lib/actions/GetPayRunJobInfo.js",
+            "title": "Get the pay run job information",
+            "description": "Return the the payrun job information",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetPayRunJobInfo.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetPayRunJobProgress": {
+            "main": "./lib/actions/GetPayRunJobProgress.js",
+            "title": "Get the pay run job progress",
+            "description": "Return the the payrun job progress",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetPayRunJobProgress.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetPayRunJobStatus": {
+            "main": "./lib/actions/GetPayRunJobStatus.js",
+            "title": "Get the pay run job status",
+            "description": "Return the the payrun job status",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetPayRunJobStatus.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetRtiJobs": {
+            "main": "./lib/actions/GetRtiJobs.js",
+            "title": "Get all RTI jobs",
+            "description": "Gets all the RTI jobs",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetRtiJobs.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "PostNewRtiJob": {
+            "main": "./lib/actions/PostNewRtiJob.js",
+            "title": "Create new RTI job",
+            "description": "Creates the new RTI job to the queue and returns the job info",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/PostNewRtiJob.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "DeleteRtiJob": {
+            "main": "./lib/actions/DeleteRtiJob.js",
+            "title": "Delete the RTI job",
+            "description": "Deletes the the RTI job",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/DeleteRtiJob.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetRtiJobInfo": {
+            "main": "./lib/actions/GetRtiJobInfo.js",
+            "title": "Get the RTI job information",
+            "description": "Return the the RTI job information",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetRtiJobInfo.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetRtiJobProgress": {
+            "main": "./lib/actions/GetRtiJobProgress.js",
+            "title": "Get the RTI job progress",
+            "description": "Return the the RTI job progress",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetRtiJobProgress.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetRtiJobStatus": {
+            "main": "./lib/actions/GetRtiJobStatus.js",
+            "title": "Get the RTI job status",
+            "description": "Return the the RTI job status",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetRtiJobStatus.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetQueryResponse": {
+            "main": "./lib/actions/GetQueryResponse.js",
+            "title": "Get the query result",
+            "description": "Get the results for the specified query",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetQueryResponse.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetActivePayInstructionsReportOutput": {
+            "main": "./lib/actions/GetActivePayInstructionsReportOutput.js",
+            "title": "Runs the active pay instructions report",
+            "description": "Returns the result of the executed active pay instructions report for the given query parameters",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetActivePayInstructionsReportOutput.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetAoeLiabilityReportOuput": {
+            "main": "./lib/actions/GetAoeLiabilityReportOuput.js",
+            "title": "Runs the AOE liability report",
+            "description": "Returns the result of the executed AOE liability report for the given query parameters",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetAoeLiabilityReportOuput.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetDpsMessageReportOutput": {
+            "main": "./lib/actions/GetDpsMessageReportOutput.js",
+            "title": "Runs the DPS message report",
+            "description": "Returns the result of the executed DPS message report for the given query parameters",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetDpsMessageReportOutput.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetGrossToNetReportOutput": {
+            "main": "./lib/actions/GetGrossToNetReportOutput.js",
+            "title": "Runs the gross to net report",
+            "description": "Returns the result of the executed gross to net report for the given query parameters",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetGrossToNetReportOutput.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetHolidayBalanceReportOuput": {
+            "main": "./lib/actions/GetHolidayBalanceReportOuput.js",
+            "title": "Runs the holiday balance report",
+            "description": "Returns the result of the executed holiday balance report for the given query parameters",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetHolidayBalanceReportOuput.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetLastPayDateReportOuput": {
+            "main": "./lib/actions/GetLastPayDateReportOuput.js",
+            "title": "Runs the last pay date report",
+            "description": "Returns the result of the executed last pay date report for the given query parameters",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetLastPayDateReportOuput.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetNetPayReportOutput": {
+            "main": "./lib/actions/GetNetPayReportOutput.js",
+            "title": "Runs the net pay report",
+            "description": "Returns the result of the executed net pay report for the given query parameters",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetNetPayReportOutput.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetNextPayPeriodDatesReportOutput": {
+            "main": "./lib/actions/GetNextPayPeriodDatesReportOutput.js",
+            "title": "Runs the next pay period report",
+            "description": "Returns the result of the executed next pay period report for the given query parameters",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetNextPayPeriodDatesReportOutput.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetP11SummaryReportOutput": {
+            "main": "./lib/actions/GetP11SummaryReportOutput.js",
+            "title": "Runs the P11 summary report",
+            "description": "Returns the result of the executed P11 summary report for the given query parameters",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetP11SummaryReportOutput.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetP32NetReportOutput": {
+            "main": "./lib/actions/GetP32NetReportOutput.js",
+            "title": "Runs the P32 report",
+            "description": "Returns the result of the executed P32 report for the given query parameters",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetP32NetReportOutput.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetP32SummaryNetReportOutput": {
+            "main": "./lib/actions/GetP32SummaryNetReportOutput.js",
+            "title": "Runs the P32 summary report",
+            "description": "Returns the result of the executed P32 summary report for the given query parameters",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetP32SummaryNetReportOutput.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetP45ReportOutput": {
+            "main": "./lib/actions/GetP45ReportOutput.js",
+            "title": "Runs the P45 report",
+            "description": "Returns the result of the executed P45 report for the given query parameters",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetP45ReportOutput.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetP60ReportOutput": {
+            "main": "./lib/actions/GetP60ReportOutput.js",
+            "title": "Runs the P60 report",
+            "description": "Returns the result of the executed P60 report for the given query parameters",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetP60ReportOutput.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetPayDashboardPayslipReportOuput": {
+            "main": "./lib/actions/GetPayDashboardPayslipReportOuput.js",
+            "title": "Runs the Pay Dashboard payslips report",
+            "description": "Returns the result of the executed Pay Dashboard payslip report for the given query parameters. See https://api.paydashboard.com for details. For compatability should be returned as JSON with TransformDefinitionKey=Json-Clean.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetPayDashboardPayslipReportOuput.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetPayslip3ReportOutput": {
+            "main": "./lib/actions/GetPayslip3ReportOutput.js",
+            "title": "Runs the verbose payslip report",
+            "description": "Returns the result of the executed verbose payslip report for the given query parameters",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetPayslip3ReportOutput.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetPensionLiabilityReportOutput": {
+            "main": "./lib/actions/GetPensionLiabilityReportOutput.js",
+            "title": "Runs the pension liability report",
+            "description": "Returns the result of the executed pension liability report for the given query parameters",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetPensionLiabilityReportOutput.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "DeleteReportDefinition": {
+            "main": "./lib/actions/DeleteReportDefinition.js",
+            "title": "Deletes a report definition",
+            "description": "Delete the specified report definition",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/DeleteReportDefinition.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetReportDefinitionFromApplication": {
+            "main": "./lib/actions/GetReportDefinitionFromApplication.js",
+            "title": "Get the report definition",
+            "description": "Returns the specified report definition from the authroised application",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetReportDefinitionFromApplication.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "PutReportDefinition": {
+            "main": "./lib/actions/PutReportDefinition.js",
+            "title": "Updates a report definition",
+            "description": "Updates the existing specified report definition object",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/PutReportDefinition.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetReportOutput": {
+            "main": "./lib/actions/GetReportOutput.js",
+            "title": "Runs the specified report definition",
+            "description": "Returns the result of the executed report definition",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetReportOutput.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetReportDefinitionsFromApplication": {
+            "main": "./lib/actions/GetReportDefinitionsFromApplication.js",
+            "title": "Gets all reports",
+            "description": "Get links to all saved report definitions under authorised application",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetReportDefinitionsFromApplication.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "PostReportDefinition": {
+            "main": "./lib/actions/PostReportDefinition.js",
+            "title": "Create a new report definition",
+            "description": "Creates a new report defintion object",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/PostReportDefinition.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetSchemas": {
+            "main": "./lib/actions/GetSchemas.js",
+            "title": "Get a list of all available schemas",
+            "description": "Returns a collection of links to all the available data object schemas",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetSchemas.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetSchema": {
+            "main": "./lib/actions/GetSchema.js",
+            "title": "Get XSD schema",
+            "description": "Returns the XSD schema for the specified data type",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetSchema.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetTemplateModel": {
+            "main": "./lib/actions/GetTemplateModel.js",
+            "title": "Get the object template",
+            "description": "Returns a template instance of the specified data type",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetTemplateModel.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetTemplates": {
+            "main": "./lib/actions/GetTemplates.js",
+            "title": "Get a list of all available data object tempaltes",
+            "description": "Returns a collection of links to all the available data object templates",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetTemplates.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "DeleteTransformDefinition": {
+            "main": "./lib/actions/DeleteTransformDefinition.js",
+            "title": "Deletes a transform definition",
+            "description": "Delete the specified transform definition",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/DeleteTransformDefinition.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetTransformDefinitionFromApplication": {
+            "main": "./lib/actions/GetTransformDefinitionFromApplication.js",
+            "title": "Get the transform definition",
+            "description": "Returns the specified transform definition from the authroised application",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetTransformDefinitionFromApplication.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "PutTransformDefinition": {
+            "main": "./lib/actions/PutTransformDefinition.js",
+            "title": "Updates a transform definition",
+            "description": "Updates the existing specified transform definition object",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/PutTransformDefinition.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetTransformDefinitionsFromApplication": {
+            "main": "./lib/actions/GetTransformDefinitionsFromApplication.js",
+            "title": "Gets all transform definitions",
+            "description": "Get links to all saved transform definitions under authorised application",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetTransformDefinitionsFromApplication.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "PostTransformDefinition": {
+            "main": "./lib/actions/PostTransformDefinition.js",
+            "title": "Create a new transform definition",
+            "description": "Creates a new transform defintion object",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/PostTransformDefinition.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        }
+    }
+}

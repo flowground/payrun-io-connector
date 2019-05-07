@@ -1,0 +1,112 @@
+{
+    "type": "object",
+    "properties": {
+        "Authorization": {
+            "required": true,
+            "type": "string",
+            "format": "string",
+            "default": "Auto"
+        },
+        "requestBody": {
+            "properties": {
+                "PayRunJobInstruction": {
+                    "properties": {
+                        "Employees": {
+                            "description": "The pay run job instructions' employees",
+                            "properties": {
+                                "Employee": {
+                                    "items": {
+                                        "properties": {
+                                            "@href": {
+                                                "description": "The links' href",
+                                                "title": "@href",
+                                                "type": "string"
+                                            },
+                                            "@rel": {
+                                                "description": "The links' target type",
+                                                "title": "@rel",
+                                                "type": "string"
+                                            },
+                                            "@title": {
+                                                "description": "The links' title",
+                                                "title": "@title",
+                                                "type": "string"
+                                            }
+                                        },
+                                        "type": "object"
+                                    },
+                                    "type": "array"
+                                }
+                            },
+                            "title": "Employee",
+                            "type": "object"
+                        },
+                        "EndDate": {
+                            "description": "The pay run job instructions' end date",
+                            "format": "date",
+                            "title": "EndDate",
+                            "type": "string"
+                        },
+                        "HoldingDate": {
+                            "description": "The pay run job instructions' holding date",
+                            "format": "date-time",
+                            "title": "HoldingDate",
+                            "type": "string"
+                        },
+                        "IsSupplementary": {
+                            "description": "The pay run job instructions' is supplementary",
+                            "title": "IsSupplementary",
+                            "type": "boolean"
+                        },
+                        "PaySchedule": {
+                            "description": "The pay run job instructions' pay schedule",
+                            "properties": {
+                                "_href": {
+                                    "description": "The links' href",
+                                    "title": "@href",
+                                    "type": "string"
+                                },
+                                "_rel": {
+                                    "description": "The links' target type",
+                                    "title": "@rel",
+                                    "type": "string"
+                                },
+                                "_title": {
+                                    "description": "The links' title",
+                                    "title": "@title",
+                                    "type": "string"
+                                }
+                            },
+                            "title": "PaySchedule",
+                            "type": "object"
+                        },
+                        "PaymentDate": {
+                            "description": "The pay run job instructions' payment date",
+                            "format": "date",
+                            "title": "PaymentDate",
+                            "type": "string"
+                        },
+                        "StartDate": {
+                            "description": "The pay run job instructions' start date",
+                            "format": "date",
+                            "title": "StartDate",
+                            "type": "string"
+                        }
+                    },
+                    "title": "PayRunJobInstruction",
+                    "type": "object"
+                }
+            },
+            "type": "object",
+            "xml": {
+                "name": "PayRunJobInstruction"
+            }
+        },
+        "Api_Version": {
+            "required": true,
+            "type": "string",
+            "format": "string",
+            "default": "default"
+        }
+    }
+}

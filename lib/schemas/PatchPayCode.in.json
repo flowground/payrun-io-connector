@@ -1,0 +1,142 @@
+{
+    "type": "object",
+    "properties": {
+        "EmployerId": {
+            "required": true,
+            "type": "string"
+        },
+        "PayCodeId": {
+            "required": true,
+            "type": "string"
+        },
+        "Authorization": {
+            "required": true,
+            "type": "string",
+            "format": "string",
+            "default": "Auto"
+        },
+        "requestBody": {
+            "properties": {
+                "PayCode": {
+                    "properties": {
+                        "Benefit": {
+                            "description": "The pay codes' benefit",
+                            "title": "Benefit",
+                            "type": "boolean"
+                        },
+                        "Code": {
+                            "description": "The pay codes' code",
+                            "title": "Code",
+                            "type": "string"
+                        },
+                        "Description": {
+                            "description": "The pay codes' description",
+                            "title": "Description",
+                            "type": "string"
+                        },
+                        "EffectiveDate": {
+                            "description": "The pay codes' effective date",
+                            "format": "date",
+                            "title": "EffectiveDate",
+                            "type": "string"
+                        },
+                        "Niable": {
+                            "description": "The pay codes' niable",
+                            "title": "Niable",
+                            "type": "boolean"
+                        },
+                        "NominalCode": {
+                            "description": "The pay codes' nominal code",
+                            "properties": {
+                                "_href": {
+                                    "description": "The links' href",
+                                    "title": "@href",
+                                    "type": "string"
+                                },
+                                "_rel": {
+                                    "description": "The links' target type",
+                                    "title": "@rel",
+                                    "type": "string"
+                                },
+                                "_title": {
+                                    "description": "The links' title",
+                                    "title": "@title",
+                                    "type": "string"
+                                }
+                            },
+                            "title": "NominalCode",
+                            "type": "object"
+                        },
+                        "NonArrestable": {
+                            "description": "The pay codes' non arrestable",
+                            "title": "NonArrestable",
+                            "type": "boolean"
+                        },
+                        "Notional": {
+                            "description": "The pay codes' notional",
+                            "title": "Notional",
+                            "type": "boolean"
+                        },
+                        "Readonly": {
+                            "description": "The pay codes' readonly",
+                            "title": "Readonly",
+                            "type": "boolean"
+                        },
+                        "Region": {
+                            "description": "The pay codes' region",
+                            "enum": [
+                                "NotSet",
+                                "England",
+                                "Scotland",
+                                "Wales"
+                            ],
+                            "title": "Region",
+                            "type": "string"
+                        },
+                        "Revision": {
+                            "description": "The pay codes' revision",
+                            "format": "int32",
+                            "title": "Revision",
+                            "type": "integer"
+                        },
+                        "Taxable": {
+                            "description": "The pay codes' taxable",
+                            "title": "Taxable",
+                            "type": "boolean"
+                        },
+                        "Territory": {
+                            "description": "The pay codes' territory",
+                            "enum": [
+                                "UnitedKingdom"
+                            ],
+                            "title": "Territory",
+                            "type": "string"
+                        },
+                        "Type": {
+                            "description": "The pay codes' type",
+                            "enum": [
+                                "NotSet",
+                                "Payment",
+                                "Deduction"
+                            ],
+                            "title": "Type",
+                            "type": "string"
+                        }
+                    },
+                    "title": "PayCode",
+                    "type": "object"
+                }
+            },
+            "type": "object",
+            "xml": {
+                "name": "PayCode"
+            }
+        },
+        "Api_Version": {
+            "required": true,
+            "type": "string",
+            "format": "string",
+            "default": "default"
+        }
+    }
+}

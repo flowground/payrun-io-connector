@@ -1,0 +1,33 @@
+{
+    "type": "object",
+    "properties": {
+        "EmployerId": {
+            "required": true,
+            "type": "string"
+        },
+        "PayScheduleId": {
+            "required": true,
+            "type": "string"
+        },
+        "PayRunId": {
+            "required": true,
+            "type": "string"
+        },
+        "EmployeeId": {
+            "required": true,
+            "type": "string"
+        },
+        "Authorization": {
+            "required": true,
+            "type": "string",
+            "format": "string",
+            "default": "Auto"
+        },
+        "Api_Version": {
+            "required": true,
+            "type": "string",
+            "format": "string",
+            "default": "default"
+        }
+    }
+}

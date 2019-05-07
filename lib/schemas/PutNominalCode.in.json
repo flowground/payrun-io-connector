@@ -1,0 +1,49 @@
+{
+    "type": "object",
+    "properties": {
+        "EmployerId": {
+            "required": true,
+            "type": "string"
+        },
+        "NominalCodeId": {
+            "required": true,
+            "type": "string"
+        },
+        "Authorization": {
+            "required": true,
+            "type": "string",
+            "format": "string",
+            "default": "Auto"
+        },
+        "requestBody": {
+            "properties": {
+                "NominalCode": {
+                    "properties": {
+                        "Description": {
+                            "description": "The nominal codes' description",
+                            "title": "Description",
+                            "type": "string"
+                        },
+                        "Key": {
+                            "description": "The nominal codes' key",
+                            "title": "Key",
+                            "type": "string"
+                        }
+                    },
+                    "title": "NominalCode",
+                    "type": "object"
+                }
+            },
+            "type": "object",
+            "xml": {
+                "name": "NominalCode"
+            }
+        },
+        "Api_Version": {
+            "required": true,
+            "type": "string",
+            "format": "string",
+            "default": "default"
+        }
+    }
+}

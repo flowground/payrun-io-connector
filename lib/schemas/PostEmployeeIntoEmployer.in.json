@@ -1,0 +1,444 @@
+{
+    "type": "object",
+    "properties": {
+        "EmployerId": {
+            "required": true,
+            "type": "string"
+        },
+        "Authorization": {
+            "required": true,
+            "type": "string",
+            "format": "string",
+            "default": "Auto"
+        },
+        "requestBody": {
+            "properties": {
+                "Employee": {
+                    "properties": {
+                        "AEAssessmentOverride": {
+                            "description": "The employees' a e assessment override",
+                            "enum": [
+                                "None",
+                                "OptOut",
+                                "OptIn",
+                                "VoluntaryJoiner",
+                                "ContractualPension",
+                                "CeasedMembership",
+                                "Leaver",
+                                "Excluded"
+                            ],
+                            "title": "AEAssessmentOverride",
+                            "type": "string"
+                        },
+                        "AEAssessmentOverrideDate": {
+                            "description": "The employees' a e assessment override date",
+                            "format": "date",
+                            "title": "AEAssessmentOverrideDate",
+                            "type": "string"
+                        },
+                        "AEPostponementDate": {
+                            "description": "The employees' a e postponement date",
+                            "format": "date",
+                            "title": "AEPostponementDate",
+                            "type": "string"
+                        },
+                        "Address": {
+                            "description": "The employees' address",
+                            "properties": {
+                                "Address1": {
+                                    "description": "The addresss' line 1",
+                                    "title": "Address1",
+                                    "type": "string"
+                                },
+                                "Address2": {
+                                    "description": "The addresss' line 2",
+                                    "title": "Address2",
+                                    "type": "string"
+                                },
+                                "Address3": {
+                                    "description": "The addresss' line 3",
+                                    "title": "Address3",
+                                    "type": "string"
+                                },
+                                "Address4": {
+                                    "description": "The addresss' line 4",
+                                    "title": "Address4",
+                                    "type": "string"
+                                },
+                                "Country": {
+                                    "description": "The addresss' country",
+                                    "title": "Country",
+                                    "type": "string"
+                                },
+                                "Postcode": {
+                                    "description": "The addresss' postcode",
+                                    "title": "Postcode",
+                                    "type": "string"
+                                }
+                            },
+                            "title": "Address",
+                            "type": "object"
+                        },
+                        "BankAccount": {
+                            "description": "The employees' bank account",
+                            "properties": {
+                                "AccountName": {
+                                    "description": "The bank accounts' account name",
+                                    "title": "AccountName",
+                                    "type": "string"
+                                },
+                                "AccountNumber": {
+                                    "description": "The bank accounts' account number",
+                                    "title": "AccountNumber",
+                                    "type": "string"
+                                },
+                                "Reference": {
+                                    "description": "The bank accounts' reference",
+                                    "title": "Reference",
+                                    "type": "string"
+                                },
+                                "SortCode": {
+                                    "description": "The bank accounts' sort code",
+                                    "title": "SortCode",
+                                    "type": "string"
+                                }
+                            },
+                            "title": "BankAccount",
+                            "type": "object"
+                        },
+                        "Code": {
+                            "description": "The employees' code",
+                            "title": "Code",
+                            "type": "string"
+                        },
+                        "DateOfBirth": {
+                            "description": "The employees' date of birth",
+                            "format": "date",
+                            "title": "DateOfBirth",
+                            "type": "string"
+                        },
+                        "Deactivated": {
+                            "description": "The employees' deactivated",
+                            "title": "Deactivated",
+                            "type": "boolean"
+                        },
+                        "DirectorshipAppointmentDate": {
+                            "description": "The employees' directorship appointment date",
+                            "format": "date",
+                            "title": "DirectorshipAppointmentDate",
+                            "type": "string"
+                        },
+                        "EEACitizen": {
+                            "description": "The employees' e e a citizen",
+                            "title": "EEACitizen",
+                            "type": "boolean"
+                        },
+                        "EPM6": {
+                            "description": "The employees' e p m6",
+                            "title": "EPM6",
+                            "type": "boolean"
+                        },
+                        "EffectiveDate": {
+                            "description": "The employees' effective date",
+                            "format": "date",
+                            "title": "EffectiveDate",
+                            "type": "string"
+                        },
+                        "EmployeePartner": {
+                            "description": "The employees' employee partner",
+                            "properties": {
+                                "FirstName": {
+                                    "description": "The employee partners' first name",
+                                    "title": "FirstName",
+                                    "type": "string"
+                                },
+                                "Initials": {
+                                    "description": "The employee partners' initials",
+                                    "title": "Initials",
+                                    "type": "string"
+                                },
+                                "LastName": {
+                                    "description": "The employee partners' last name",
+                                    "title": "LastName",
+                                    "type": "string"
+                                },
+                                "MiddleName": {
+                                    "description": "The employee partners' middle name",
+                                    "title": "MiddleName",
+                                    "type": "string"
+                                },
+                                "NiNumber": {
+                                    "description": "The employee partners' ni number",
+                                    "title": "NiNumber",
+                                    "type": "string"
+                                }
+                            },
+                            "title": "EmployeePartner",
+                            "type": "object"
+                        },
+                        "FirstName": {
+                            "description": "The employees' the first name",
+                            "title": "FirstName",
+                            "type": "string"
+                        },
+                        "Gender": {
+                            "description": "The employees' gender",
+                            "enum": [
+                                "Unknown",
+                                "Male",
+                                "Female"
+                            ],
+                            "title": "Gender",
+                            "type": "string"
+                        },
+                        "HoursPerWeek": {
+                            "description": "The employees' hours per week",
+                            "format": "double",
+                            "title": "HoursPerWeek",
+                            "type": "number"
+                        },
+                        "Initials": {
+                            "description": "The employees' initials",
+                            "title": "Initials",
+                            "type": "string"
+                        },
+                        "IrregularEmployment": {
+                            "description": "The employees' irregular employment",
+                            "title": "IrregularEmployment",
+                            "type": "boolean"
+                        },
+                        "IsAgencyWorker": {
+                            "description": "The employees' is agency worker",
+                            "title": "IsAgencyWorker",
+                            "type": "boolean"
+                        },
+                        "LastName": {
+                            "description": "The employees' last name",
+                            "title": "LastName",
+                            "type": "string"
+                        },
+                        "LeaverReason": {
+                            "description": "The employees' leaver reason",
+                            "enum": [
+                                "Resigned",
+                                "Dismissed",
+                                "Redundant",
+                                "Retired",
+                                "Deceased",
+                                "LegalCustody",
+                                "Other"
+                            ],
+                            "title": "LeaverReason",
+                            "type": "string"
+                        },
+                        "LeavingDate": {
+                            "description": "The employees' leaving date",
+                            "format": "date",
+                            "title": "LeavingDate",
+                            "type": "string"
+                        },
+                        "MaritalStatus": {
+                            "description": "The employees' marital status",
+                            "enum": [
+                                "NotSet",
+                                "Single",
+                                "Married",
+                                "Divorced",
+                                "Widowed"
+                            ],
+                            "title": "MaritalStatus",
+                            "type": "string"
+                        },
+                        "MiddleName": {
+                            "description": "The employees' middle name",
+                            "title": "MiddleName",
+                            "type": "string"
+                        },
+                        "NiNumber": {
+                            "description": "The employees' ni number",
+                            "title": "NiNumber",
+                            "type": "string"
+                        },
+                        "NicLiability": {
+                            "description": "The employees' nic liability",
+                            "enum": [
+                                "HasOtherJob",
+                                "IsFemaleEntitledToReducedRate",
+                                "IsNotLiable",
+                                "IsContractedOut",
+                                "IsFullyLiable",
+                                "IsApprentice",
+                                "LeaverBeyond6Weeks",
+                                "PaymentAfterLeaving"
+                            ],
+                            "title": "NicLiability",
+                            "type": "string"
+                        },
+                        "OnStrike": {
+                            "description": "The employees' on strike",
+                            "title": "OnStrike",
+                            "type": "boolean"
+                        },
+                        "PassportNumber": {
+                            "description": "The employees' passport number",
+                            "title": "PassportNumber",
+                            "type": "string"
+                        },
+                        "PaySchedule": {
+                            "description": "The employees' pay schedule",
+                            "properties": {
+                                "_href": {
+                                    "description": "The links' href",
+                                    "title": "@href",
+                                    "type": "string"
+                                },
+                                "_rel": {
+                                    "description": "The links' target type",
+                                    "title": "@rel",
+                                    "type": "string"
+                                },
+                                "_title": {
+                                    "description": "The links' title",
+                                    "title": "@title",
+                                    "type": "string"
+                                }
+                            },
+                            "title": "PaySchedule",
+                            "type": "object"
+                        },
+                        "PaymentMethod": {
+                            "description": "The employees' payment method",
+                            "enum": [
+                                "NotSet",
+                                "Cash",
+                                "Cheque",
+                                "BACS",
+                                "FasterPayments",
+                                "Other"
+                            ],
+                            "title": "PaymentMethod",
+                            "type": "string"
+                        },
+                        "PaymentToANonIndividual": {
+                            "description": "The employees' payment to a non individual",
+                            "title": "PaymentToANonIndividual",
+                            "type": "boolean"
+                        },
+                        "Region": {
+                            "description": "The employees' region",
+                            "enum": [
+                                "NotSet",
+                                "England",
+                                "Scotland",
+                                "Wales"
+                            ],
+                            "title": "Region",
+                            "type": "string"
+                        },
+                        "Revision": {
+                            "description": "The employees' revision",
+                            "format": "int32",
+                            "title": "Revision",
+                            "type": "integer"
+                        },
+                        "RuleExclusions": {
+                            "description": "The employees' rule exclusions",
+                            "enum": [
+                                "None",
+                                "NiMissingPayInstructionRule",
+                                "TaxMissingPayInstructionRule",
+                                "TaxCodeUpliftRule",
+                                "NiSetExpectedLetterRule",
+                                "NiDateOfBirthChangeRetrospectiveCRule",
+                                "NiDefermentStatusChangeRule",
+                                "NiEndContractedOutTransferRule",
+                                "PaymentAfterLeavingRule",
+                                "LeaverEndInstructionsRule",
+                                "P45StudentLoanInstructionRule",
+                                "P45TaxInstructionRule",
+                                "P45YtdTaxRule",
+                                "YtdInstructionRule",
+                                "TaxCodeRegionChangeRule",
+                                "AutoEnrolmentStatusChangeRule",
+                                "EmployeeDeceasedRule",
+                                "BenefitInstructionAutoEndRule"
+                            ],
+                            "title": "RuleExclusions",
+                            "type": "string"
+                        },
+                        "Seconded": {
+                            "description": "The employees' seconded",
+                            "enum": [
+                                "NotSet",
+                                "Stay183DaysOrMore",
+                                "StayLessThan183Days",
+                                "InOutUk"
+                            ],
+                            "title": "Seconded",
+                            "type": "string"
+                        },
+                        "StartDate": {
+                            "description": "The employees' start date",
+                            "format": "date",
+                            "title": "StartDate",
+                            "type": "string"
+                        },
+                        "StarterDeclaration": {
+                            "description": "The employees' starter declaration",
+                            "enum": [
+                                "PreviouslyReported",
+                                "A",
+                                "B",
+                                "C"
+                            ],
+                            "title": "StarterDeclaration",
+                            "type": "string"
+                        },
+                        "Territory": {
+                            "description": "The employees' territory",
+                            "enum": [
+                                "UnitedKingdom"
+                            ],
+                            "title": "Territory",
+                            "type": "string"
+                        },
+                        "Title": {
+                            "description": "The employees' title",
+                            "title": "Title",
+                            "type": "string"
+                        },
+                        "WorkingWeek": {
+                            "description": "The employees' working week",
+                            "enum": [
+                                "None",
+                                "Monday",
+                                "Tuesday",
+                                "Wednesday",
+                                "Thursday",
+                                "Friday",
+                                "AllWeekDays",
+                                "Saturday",
+                                "Sunday",
+                                "AllDays"
+                            ],
+                            "title": "WorkingWeek",
+                            "type": "string"
+                        }
+                    },
+                    "title": "Employee",
+                    "type": "object"
+                }
+            },
+            "type": "object",
+            "xml": {
+                "name": "Employee"
+            }
+        },
+        "Api_Version": {
+            "required": true,
+            "type": "string",
+            "format": "string",
+            "default": "default"
+        }
+    }
+}

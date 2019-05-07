@@ -1,0 +1,89 @@
+{
+    "type": "object",
+    "properties": {
+        "Authorization": {
+            "required": true,
+            "type": "string",
+            "format": "string",
+            "default": "Auto"
+        },
+        "requestBody": {
+            "properties": {
+                "CisJobInstructionBase": {
+                    "properties": {
+                        "Employer": {
+                            "description": "The cis job instruction bases' employer",
+                            "properties": {
+                                "_href": {
+                                    "description": "The links' href",
+                                    "title": "@href",
+                                    "type": "string"
+                                },
+                                "_rel": {
+                                    "description": "The links' target type",
+                                    "title": "@rel",
+                                    "type": "string"
+                                },
+                                "_title": {
+                                    "description": "The links' title",
+                                    "title": "@title",
+                                    "type": "string"
+                                }
+                            },
+                            "title": "Employer",
+                            "type": "object"
+                        },
+                        "HoldingDate": {
+                            "description": "The cis job instruction bases' holding date",
+                            "format": "date-time",
+                            "title": "HoldingDate",
+                            "type": "string"
+                        },
+                        "SubContractors": {
+                            "description": "The cis job instruction bases' sub contractors",
+                            "properties": {
+                                "SubContractor": {
+                                    "items": {
+                                        "properties": {
+                                            "@href": {
+                                                "description": "The links' href",
+                                                "title": "@href",
+                                                "type": "string"
+                                            },
+                                            "@rel": {
+                                                "description": "The links' target type",
+                                                "title": "@rel",
+                                                "type": "string"
+                                            },
+                                            "@title": {
+                                                "description": "The links' title",
+                                                "title": "@title",
+                                                "type": "string"
+                                            }
+                                        },
+                                        "type": "object"
+                                    },
+                                    "type": "array"
+                                }
+                            },
+                            "title": "SubContractor",
+                            "type": "object"
+                        }
+                    },
+                    "title": "CisJobInstructionBase",
+                    "type": "object"
+                }
+            },
+            "type": "object",
+            "xml": {
+                "name": "CisJobInstructionBase"
+            }
+        },
+        "Api_Version": {
+            "required": true,
+            "type": "string",
+            "format": "string",
+            "default": "default"
+        }
+    }
+}

@@ -1,0 +1,122 @@
+{
+    "type": "object",
+    "properties": {
+        "EmployerId": {
+            "required": true,
+            "type": "string"
+        },
+        "EmployeeId": {
+            "required": true,
+            "type": "string"
+        },
+        "AEAssessmentId": {
+            "required": true,
+            "type": "string"
+        },
+        "Authorization": {
+            "required": true,
+            "type": "string",
+            "format": "string",
+            "default": "Auto"
+        },
+        "requestBody": {
+            "properties": {
+                "AEAssessment": {
+                    "properties": {
+                        "Age": {
+                            "description": "The a e assessments' age",
+                            "format": "int32",
+                            "title": "Age",
+                            "type": "integer"
+                        },
+                        "AssessmentCode": {
+                            "description": "The a e assessments' assessment code",
+                            "enum": [
+                                "Excluded",
+                                "EligibleJobHolder",
+                                "NonEligibleJobHolder",
+                                "EntitledWorker"
+                            ],
+                            "title": "AssessmentCode",
+                            "type": "string"
+                        },
+                        "AssessmentDate": {
+                            "description": "The a e assessments' assessment date",
+                            "format": "date",
+                            "title": "AssessmentDate",
+                            "type": "string"
+                        },
+                        "AssessmentEvent": {
+                            "description": "The a e assessments' assessment event",
+                            "enum": [
+                                "NonEnrolmentEvent",
+                                "AutomaticEnrolment",
+                                "OptIn",
+                                "VoluntaryJoiner",
+                                "ContractualEnrolment"
+                            ],
+                            "title": "AssessmentEvent",
+                            "type": "string"
+                        },
+                        "AssessmentOverride": {
+                            "description": "The a e assessments' assessment override",
+                            "enum": [
+                                "None",
+                                "OptOut",
+                                "OptIn",
+                                "VoluntaryJoiner",
+                                "ContractualPension",
+                                "CeasedMembership",
+                                "Leaver",
+                                "Excluded"
+                            ],
+                            "title": "AssessmentOverride",
+                            "type": "string"
+                        },
+                        "AssessmentResult": {
+                            "description": "The a e assessments' assessment result",
+                            "enum": [
+                                "Inconclusive",
+                                "NoChange",
+                                "Enrol",
+                                "Exit"
+                            ],
+                            "title": "AssessmentResult",
+                            "type": "string"
+                        },
+                        "QualifyingEarnings": {
+                            "description": "The a e assessments' qualifying earnings",
+                            "format": "double",
+                            "title": "QualifyingEarnings",
+                            "type": "number"
+                        },
+                        "StatePensionAge": {
+                            "description": "The a e assessments' state pension age",
+                            "format": "int32",
+                            "title": "StatePensionAge",
+                            "type": "integer"
+                        },
+                        "StatePensionDate": {
+                            "description": "The a e assessments' state pension date",
+                            "format": "date",
+                            "title": "StatePensionDate",
+                            "type": "string"
+                        }
+                    },
+                    "title": "AEAssessment",
+                    "type": "object"
+                }
+            },
+            "type": "object",
+            "xml": {
+                "name": "AEAssessment"
+            }
+        },
+        "Api_Version": {
+            "required": true,
+            "type": "string",
+            "format": "string",
+            "default": "default"
+        }
+    }
+}

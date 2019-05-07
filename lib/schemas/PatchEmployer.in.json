@@ -1,0 +1,369 @@
+{
+    "type": "object",
+    "properties": {
+        "EmployerId": {
+            "required": true,
+            "type": "string"
+        },
+        "Authorization": {
+            "required": true,
+            "type": "string",
+            "format": "string",
+            "default": "Auto"
+        },
+        "requestBody": {
+            "properties": {
+                "Employer": {
+                    "properties": {
+                        "Address": {
+                            "description": "The employers' address",
+                            "properties": {
+                                "Address1": {
+                                    "description": "The addresss' line 1",
+                                    "title": "Address1",
+                                    "type": "string"
+                                },
+                                "Address2": {
+                                    "description": "The addresss' line 2",
+                                    "title": "Address2",
+                                    "type": "string"
+                                },
+                                "Address3": {
+                                    "description": "The addresss' line 3",
+                                    "title": "Address3",
+                                    "type": "string"
+                                },
+                                "Address4": {
+                                    "description": "The addresss' line 4",
+                                    "title": "Address4",
+                                    "type": "string"
+                                },
+                                "Country": {
+                                    "description": "The addresss' country",
+                                    "title": "Country",
+                                    "type": "string"
+                                },
+                                "Postcode": {
+                                    "description": "The addresss' postcode",
+                                    "title": "Postcode",
+                                    "type": "string"
+                                }
+                            },
+                            "title": "Address",
+                            "type": "object"
+                        },
+                        "ApprenticeshipLevyAllowance": {
+                            "description": "The employers' apprenticeship levy allowance",
+                            "format": "double",
+                            "title": "ApprenticeshipLevyAllowance",
+                            "type": "number"
+                        },
+                        "AutoEnrolment": {
+                            "description": "The employers' auto enrolment",
+                            "properties": {
+                                "Pension": {
+                                    "description": "The employer auto enrolments' pension",
+                                    "properties": {
+                                        "_href": {
+                                            "description": "The links' href",
+                                            "title": "@href",
+                                            "type": "string"
+                                        },
+                                        "_rel": {
+                                            "description": "The links' target type",
+                                            "title": "@rel",
+                                            "type": "string"
+                                        },
+                                        "_title": {
+                                            "description": "The links' title",
+                                            "title": "@title",
+                                            "type": "string"
+                                        }
+                                    },
+                                    "title": "Pension",
+                                    "type": "object"
+                                },
+                                "PostponementDate": {
+                                    "description": "The employer auto enrolments' postponement date",
+                                    "format": "date",
+                                    "title": "PostponementDate",
+                                    "type": "string"
+                                },
+                                "PrimaryEmail": {
+                                    "description": "The employer auto enrolments' primary email",
+                                    "title": "PrimaryEmail",
+                                    "type": "string"
+                                },
+                                "PrimaryFirstName": {
+                                    "description": "The employer auto enrolments' primary first name",
+                                    "title": "PrimaryFirstName",
+                                    "type": "string"
+                                },
+                                "PrimaryJobTitle": {
+                                    "description": "The employer auto enrolments' primary job title",
+                                    "title": "PrimaryJobTitle",
+                                    "type": "string"
+                                },
+                                "PrimaryLastName": {
+                                    "description": "The employer auto enrolments' primary last name",
+                                    "title": "PrimaryLastName",
+                                    "type": "string"
+                                },
+                                "PrimaryTelephone": {
+                                    "description": "The employer auto enrolments' primary telephone",
+                                    "title": "PrimaryTelephone",
+                                    "type": "string"
+                                },
+                                "ReEnrolmentDayOffset": {
+                                    "description": "The employer auto enrolments' re enrolment day offset",
+                                    "format": "int32",
+                                    "title": "ReEnrolmentDayOffset",
+                                    "type": "integer"
+                                },
+                                "ReEnrolmentMonthOffset": {
+                                    "description": "The employer auto enrolments' re enrolment month offset",
+                                    "format": "int32",
+                                    "title": "ReEnrolmentMonthOffset",
+                                    "type": "integer"
+                                },
+                                "SecondaryEmail": {
+                                    "description": "The employer auto enrolments' secondary email",
+                                    "title": "SecondaryEmail",
+                                    "type": "string"
+                                },
+                                "SecondaryFirstName": {
+                                    "description": "The employer auto enrolments' secondary first name",
+                                    "title": "SecondaryFirstName",
+                                    "type": "string"
+                                },
+                                "SecondaryJobTitle": {
+                                    "description": "The employer auto enrolments' secondary job title",
+                                    "title": "SecondaryJobTitle",
+                                    "type": "string"
+                                },
+                                "SecondaryLastName": {
+                                    "description": "The employer auto enrolments' secondary last name",
+                                    "title": "SecondaryLastName",
+                                    "type": "string"
+                                },
+                                "SecondaryTelephone": {
+                                    "description": "The employer auto enrolments' secondary telephone",
+                                    "title": "SecondaryTelephone",
+                                    "type": "string"
+                                },
+                                "StagingDate": {
+                                    "description": "The employer auto enrolments' staging date",
+                                    "format": "date",
+                                    "title": "StagingDate",
+                                    "type": "string"
+                                }
+                            },
+                            "title": "AutoEnrolment",
+                            "type": "object"
+                        },
+                        "BacsServiceUserNumber": {
+                            "description": "The employers' bacs service user number",
+                            "title": "BacsServiceUserNumber",
+                            "type": "string"
+                        },
+                        "BankAccount": {
+                            "description": "The employers' bank account",
+                            "properties": {
+                                "AccountName": {
+                                    "description": "The bank accounts' account name",
+                                    "title": "AccountName",
+                                    "type": "string"
+                                },
+                                "AccountNumber": {
+                                    "description": "The bank accounts' account number",
+                                    "title": "AccountNumber",
+                                    "type": "string"
+                                },
+                                "Reference": {
+                                    "description": "The bank accounts' reference",
+                                    "title": "Reference",
+                                    "type": "string"
+                                },
+                                "SortCode": {
+                                    "description": "The bank accounts' sort code",
+                                    "title": "SortCode",
+                                    "type": "string"
+                                }
+                            },
+                            "title": "BankAccount",
+                            "type": "object"
+                        },
+                        "ClaimEmploymentAllowance": {
+                            "description": "The employers' claim employment allowance",
+                            "title": "ClaimEmploymentAllowance",
+                            "type": "boolean"
+                        },
+                        "ClaimSmallEmployerRelief": {
+                            "description": "The employers' claim small employer relief",
+                            "title": "ClaimSmallEmployerRelief",
+                            "type": "boolean"
+                        },
+                        "EffectiveDate": {
+                            "description": "The employers' effective date",
+                            "format": "date",
+                            "title": "EffectiveDate",
+                            "type": "string"
+                        },
+                        "HmrcSettings": {
+                            "description": "The employers' hmrc settings",
+                            "properties": {
+                                "AccountingOfficeRef": {
+                                    "description": "The hmrc settingss' accounting office ref",
+                                    "title": "AccountingOfficeRef",
+                                    "type": "string"
+                                },
+                                "COTAXRef": {
+                                    "description": "The hmrc settingss' c o t a x ref",
+                                    "title": "COTAXRef",
+                                    "type": "string"
+                                },
+                                "ContactEmail": {
+                                    "description": "The hmrc settingss' contact email",
+                                    "title": "ContactEmail",
+                                    "type": "string"
+                                },
+                                "ContactFax": {
+                                    "description": "The hmrc settingss' contact fax",
+                                    "title": "ContactFax",
+                                    "type": "string"
+                                },
+                                "ContactFirstName": {
+                                    "description": "The hmrc settingss' contact first name",
+                                    "title": "ContactFirstName",
+                                    "type": "string"
+                                },
+                                "ContactLastName": {
+                                    "description": "The hmrc settingss' contact last name",
+                                    "title": "ContactLastName",
+                                    "type": "string"
+                                },
+                                "ContactTelephone": {
+                                    "description": "The hmrc settingss' contact telephone",
+                                    "title": "ContactTelephone",
+                                    "type": "string"
+                                },
+                                "Password": {
+                                    "description": "The hmrc settingss' password",
+                                    "format": "password",
+                                    "title": "Password",
+                                    "type": "string"
+                                },
+                                "SAUTR": {
+                                    "description": "The hmrc settingss' s a u t r",
+                                    "title": "SAUTR",
+                                    "type": "string"
+                                },
+                                "Sender": {
+                                    "description": "The hmrc settingss' sender",
+                                    "enum": [
+                                        "Employer",
+                                        "Individual",
+                                        "Company",
+                                        "Agent",
+                                        "Bureau",
+                                        "Partnership",
+                                        "Trust",
+                                        "Government",
+                                        "ActingInCapacity",
+                                        "Other"
+                                    ],
+                                    "title": "Sender",
+                                    "type": "string"
+                                },
+                                "SenderId": {
+                                    "description": "The hmrc settingss' sender id",
+                                    "title": "SenderId",
+                                    "type": "string"
+                                },
+                                "TaxOfficeNumber": {
+                                    "description": "The hmrc settingss' tax office number",
+                                    "title": "TaxOfficeNumber",
+                                    "type": "string"
+                                },
+                                "TaxOfficeReference": {
+                                    "description": "The hmrc settingss' tax office reference",
+                                    "title": "TaxOfficeReference",
+                                    "type": "string"
+                                }
+                            },
+                            "title": "HmrcSettings",
+                            "type": "object"
+                        },
+                        "Name": {
+                            "description": "The employers' name",
+                            "title": "Name",
+                            "type": "string"
+                        },
+                        "Region": {
+                            "description": "The employers' region",
+                            "enum": [
+                                "NotSet",
+                                "England",
+                                "Scotland",
+                                "Wales"
+                            ],
+                            "title": "Region",
+                            "type": "string"
+                        },
+                        "Revision": {
+                            "description": "The employers' revision",
+                            "format": "int32",
+                            "title": "Revision",
+                            "type": "integer"
+                        },
+                        "RuleExclusions": {
+                            "description": "The employers' rule exclusions",
+                            "enum": [
+                                "None",
+                                "NiMissingPayInstructionRule",
+                                "TaxMissingPayInstructionRule",
+                                "TaxCodeUpliftRule",
+                                "NiSetExpectedLetterRule",
+                                "NiDateOfBirthChangeRetrospectiveCRule",
+                                "NiDefermentStatusChangeRule",
+                                "NiEndContractedOutTransferRule",
+                                "PaymentAfterLeavingRule",
+                                "LeaverEndInstructionsRule",
+                                "P45StudentLoanInstructionRule",
+                                "P45TaxInstructionRule",
+                                "P45YtdTaxRule",
+                                "YtdInstructionRule",
+                                "TaxCodeRegionChangeRule",
+                                "AutoEnrolmentStatusChangeRule",
+                                "EmployeeDeceasedRule",
+                                "BenefitInstructionAutoEndRule"
+                            ],
+                            "title": "RuleExclusions",
+                            "type": "string"
+                        },
+                        "Territory": {
+                            "description": "The employers' territory",
+                            "enum": [
+                                "UnitedKingdom"
+                            ],
+                            "title": "Territory",
+                            "type": "string"
+                        }
+                    },
+                    "title": "Employer",
+                    "type": "object"
+                }
+            },
+            "type": "object",
+            "xml": {
+                "name": "Employer"
+            }
+        },
+        "Api_Version": {
+            "required": true,
+            "type": "string",
+            "format": "string",
+            "default": "default"
+        }
+    }
+}

@@ -1,0 +1,39 @@
+{
+    "type": "object",
+    "properties": {
+        "EmployerKey": {
+            "required": true,
+            "type": "string"
+        },
+        "PayScheduleKey": {
+            "required": true,
+            "type": "string"
+        },
+        "TaxYear": {
+            "required": true,
+            "type": "string",
+            "format": "integer"
+        },
+        "TaxPeriod": {
+            "required": false,
+            "type": "string",
+            "format": "integer"
+        },
+        "TransformDefinitionKey": {
+            "required": false,
+            "type": "string"
+        },
+        "Authorization": {
+            "required": true,
+            "type": "string",
+            "format": "string",
+            "default": "Auto"
+        },
+        "Api_Version": {
+            "required": true,
+            "type": "string",
+            "format": "string",
+            "default": "default"
+        }
+    }
+}

@@ -1,0 +1,38 @@
+{
+    "type": "object",
+    "properties": {
+        "EmployerKey": {
+            "required": true,
+            "type": "string"
+        },
+        "HolidayYearEnd": {
+            "required": true,
+            "type": "string",
+            "format": "date"
+        },
+        "EmployeeCodes": {
+            "required": false,
+            "type": "string"
+        },
+        "StartIndex": {
+            "required": false,
+            "type": "string"
+        },
+        "MaxIndex": {
+            "required": false,
+            "type": "string"
+        },
+        "Authorization": {
+            "required": true,
+            "type": "string",
+            "format": "string",
+            "default": "Auto"
+        },
+        "Api_Version": {
+            "required": true,
+            "type": "string",
+            "format": "string",
+            "default": "default"
+        }
+    }
+}

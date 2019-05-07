@@ -1,0 +1,273 @@
+{
+    "type": "object",
+    "properties": {
+        "EmployerId": {
+            "required": true,
+            "type": "string"
+        },
+        "SubContractorId": {
+            "required": true,
+            "type": "string"
+        },
+        "Authorization": {
+            "required": true,
+            "type": "string",
+            "format": "string",
+            "default": "Auto"
+        },
+        "requestBody": {
+            "properties": {
+                "SubContractor": {
+                    "properties": {
+                        "Address": {
+                            "description": "The sub contractors' address",
+                            "properties": {
+                                "Address1": {
+                                    "description": "The addresss' line 1",
+                                    "title": "Address1",
+                                    "type": "string"
+                                },
+                                "Address2": {
+                                    "description": "The addresss' line 2",
+                                    "title": "Address2",
+                                    "type": "string"
+                                },
+                                "Address3": {
+                                    "description": "The addresss' line 3",
+                                    "title": "Address3",
+                                    "type": "string"
+                                },
+                                "Address4": {
+                                    "description": "The addresss' line 4",
+                                    "title": "Address4",
+                                    "type": "string"
+                                },
+                                "Country": {
+                                    "description": "The addresss' country",
+                                    "title": "Country",
+                                    "type": "string"
+                                },
+                                "Postcode": {
+                                    "description": "The addresss' postcode",
+                                    "title": "Postcode",
+                                    "type": "string"
+                                }
+                            },
+                            "title": "Address",
+                            "type": "object"
+                        },
+                        "BankAccount": {
+                            "description": "The sub contractors' bank account",
+                            "properties": {
+                                "AccountName": {
+                                    "description": "The bank accounts' account name",
+                                    "title": "AccountName",
+                                    "type": "string"
+                                },
+                                "AccountNumber": {
+                                    "description": "The bank accounts' account number",
+                                    "title": "AccountNumber",
+                                    "type": "string"
+                                },
+                                "Reference": {
+                                    "description": "The bank accounts' reference",
+                                    "title": "Reference",
+                                    "type": "string"
+                                },
+                                "SortCode": {
+                                    "description": "The bank accounts' sort code",
+                                    "title": "SortCode",
+                                    "type": "string"
+                                }
+                            },
+                            "title": "BankAccount",
+                            "type": "object"
+                        },
+                        "BusinessType": {
+                            "description": "The sub contractors' business type",
+                            "enum": [
+                                "SoleTrader",
+                                "Company",
+                                "Partnership",
+                                "Trust"
+                            ],
+                            "title": "BusinessType",
+                            "type": "string"
+                        },
+                        "CompanyName": {
+                            "description": "The sub contractors' company name",
+                            "title": "CompanyName",
+                            "type": "string"
+                        },
+                        "CompanyRegistrationNumber": {
+                            "description": "The sub contractors' company registration number",
+                            "title": "CompanyRegistrationNumber",
+                            "type": "string"
+                        },
+                        "Deactivated": {
+                            "description": "The sub contractors' deactivated",
+                            "title": "Deactivated",
+                            "type": "boolean"
+                        },
+                        "EffectiveDate": {
+                            "description": "The sub contractors' effective date",
+                            "format": "date",
+                            "title": "EffectiveDate",
+                            "type": "string"
+                        },
+                        "FirstName": {
+                            "description": "The sub contractors' first name",
+                            "title": "FirstName",
+                            "type": "string"
+                        },
+                        "Initials": {
+                            "description": "The sub contractors' initials",
+                            "title": "Initials",
+                            "type": "string"
+                        },
+                        "LastName": {
+                            "description": "The sub contractors' last name",
+                            "title": "LastName",
+                            "type": "string"
+                        },
+                        "MiddleName": {
+                            "description": "The sub contractors' middle name",
+                            "title": "MiddleName",
+                            "type": "string"
+                        },
+                        "NiNumber": {
+                            "description": "The sub contractors' ni number",
+                            "title": "NiNumber",
+                            "type": "string"
+                        },
+                        "PartnershipName": {
+                            "description": "The sub contractors' partnership name",
+                            "title": "PartnershipName",
+                            "type": "string"
+                        },
+                        "PartnershipUniqueTaxReference": {
+                            "description": "The sub contractors' partnership unique tax reference",
+                            "title": "PartnershipUniqueTaxReference",
+                            "type": "string"
+                        },
+                        "PayFrequency": {
+                            "description": "The sub contractors' pay frequency",
+                            "enum": [
+                                "Monthly",
+                                "Weekly"
+                            ],
+                            "title": "PayFrequency",
+                            "type": "string"
+                        },
+                        "PaymentMethod": {
+                            "description": "The sub contractors' payment method",
+                            "enum": [
+                                "NotSet",
+                                "Cash",
+                                "Cheque",
+                                "BACS",
+                                "FasterPayments",
+                                "Other"
+                            ],
+                            "title": "PaymentMethod",
+                            "type": "string"
+                        },
+                        "Region": {
+                            "description": "The sub contractors' region",
+                            "enum": [
+                                "NotSet",
+                                "England",
+                                "Scotland",
+                                "Wales"
+                            ],
+                            "title": "Region",
+                            "type": "string"
+                        },
+                        "Revision": {
+                            "description": "The sub contractors' revision",
+                            "format": "int32",
+                            "title": "Revision",
+                            "type": "integer"
+                        },
+                        "TaxationStatus": {
+                            "description": "The sub contractors' taxation status",
+                            "enum": [
+                                "Unmatched",
+                                "Net",
+                                "Gross"
+                            ],
+                            "title": "TaxationStatus",
+                            "type": "string"
+                        },
+                        "Telephone": {
+                            "description": "The sub contractors' telephone",
+                            "title": "Telephone",
+                            "type": "string"
+                        },
+                        "Territory": {
+                            "description": "The sub contractors' territory",
+                            "enum": [
+                                "UnitedKingdom"
+                            ],
+                            "title": "Territory",
+                            "type": "string"
+                        },
+                        "Title": {
+                            "description": "The sub contractors' title",
+                            "title": "Title",
+                            "type": "string"
+                        },
+                        "TradingName": {
+                            "description": "The sub contractors' trading name",
+                            "title": "TradingName",
+                            "type": "string"
+                        },
+                        "UniqueTaxReference": {
+                            "description": "The sub contractors' unique tax reference",
+                            "title": "UniqueTaxReference",
+                            "type": "string"
+                        },
+                        "VatRegistered": {
+                            "description": "The sub contractors' vat registered",
+                            "title": "VatRegistered",
+                            "type": "boolean"
+                        },
+                        "VatRegistrationNumber": {
+                            "description": "The sub contractors' vat registration number",
+                            "title": "VatRegistrationNumber",
+                            "type": "string"
+                        },
+                        "VerificationDate": {
+                            "description": "The sub contractors' verification date",
+                            "format": "date-time",
+                            "title": "VerificationDate",
+                            "type": "string"
+                        },
+                        "VerificationNumber": {
+                            "description": "The sub contractors' verification number",
+                            "title": "VerificationNumber",
+                            "type": "string"
+                        },
+                        "WorksNumber": {
+                            "description": "The sub contractors' works number",
+                            "title": "WorksNumber",
+                            "type": "string"
+                        }
+                    },
+                    "title": "SubContractor",
+                    "type": "object"
+                }
+            },
+            "type": "object",
+            "xml": {
+                "name": "SubContractor"
+            }
+        },
+        "Api_Version": {
+            "required": true,
+            "type": "string",
+            "format": "string",
+            "default": "default"
+        }
+    }
+}

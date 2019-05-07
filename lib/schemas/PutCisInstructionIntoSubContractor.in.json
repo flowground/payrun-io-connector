@@ -1,0 +1,124 @@
+{
+    "type": "object",
+    "properties": {
+        "EmployerId": {
+            "required": true,
+            "type": "string"
+        },
+        "SubContractorId": {
+            "required": true,
+            "type": "string"
+        },
+        "CisInstructionId": {
+            "required": true,
+            "type": "string"
+        },
+        "Authorization": {
+            "required": true,
+            "type": "string",
+            "format": "string",
+            "default": "Auto"
+        },
+        "requestBody": {
+            "properties": {
+                "CisInstruction": {
+                    "properties": {
+                        "CisLineTag": {
+                            "description": "The cis instructions' cis line tag",
+                            "title": "CisLineTag",
+                            "type": "string"
+                        },
+                        "CisLineType": {
+                            "description": "The cis instructions' cis line type",
+                            "title": "CisLineType",
+                            "type": "string"
+                        },
+                        "Description": {
+                            "description": "The cis instructions' description",
+                            "title": "Description",
+                            "type": "string"
+                        },
+                        "PayFrequency": {
+                            "description": "The cis instructions' pay frequency",
+                            "enum": [
+                                "Monthly",
+                                "Weekly"
+                            ],
+                            "title": "PayFrequency",
+                            "type": "string"
+                        },
+                        "PeriodEnd": {
+                            "description": "The cis instructions' period end",
+                            "format": "int32",
+                            "title": "PeriodEnd",
+                            "type": "integer"
+                        },
+                        "PeriodStart": {
+                            "description": "The cis instructions' period start",
+                            "format": "int32",
+                            "title": "PeriodStart",
+                            "type": "integer"
+                        },
+                        "TaxYearEnd": {
+                            "description": "The cis instructions' tax year end",
+                            "format": "int32",
+                            "title": "TaxYearEnd",
+                            "type": "integer"
+                        },
+                        "TaxYearStart": {
+                            "description": "The cis instructions' tax year start",
+                            "format": "int32",
+                            "title": "TaxYearStart",
+                            "type": "integer"
+                        },
+                        "UOM": {
+                            "description": "The cis instructions' u o m",
+                            "enum": [
+                                "NotSet",
+                                "Minute",
+                                "Hour",
+                                "Day",
+                                "Week",
+                                "Month",
+                                "Year",
+                                "Unit"
+                            ],
+                            "title": "UOM",
+                            "type": "string"
+                        },
+                        "Units": {
+                            "description": "The cis instructions' units",
+                            "format": "double",
+                            "title": "Units",
+                            "type": "number"
+                        },
+                        "VAT": {
+                            "description": "The cis instructions' v a t",
+                            "format": "double",
+                            "title": "VAT",
+                            "type": "number"
+                        },
+                        "Value": {
+                            "description": "The cis instructions' value",
+                            "format": "double",
+                            "title": "Value",
+                            "type": "number"
+                        }
+                    },
+                    "title": "CisInstruction",
+                    "type": "object"
+                }
+            },
+            "type": "object",
+            "xml": {
+                "name": "CisInstruction"
+            }
+        },
+        "Api_Version": {
+            "required": true,
+            "type": "string",
+            "format": "string",
+            "default": "default"
+        }
+    }
+}

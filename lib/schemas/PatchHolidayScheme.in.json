@@ -1,0 +1,119 @@
+{
+    "type": "object",
+    "properties": {
+        "EmployerId": {
+            "required": true,
+            "type": "string"
+        },
+        "HolidaySchemeId": {
+            "required": true,
+            "type": "string"
+        },
+        "Authorization": {
+            "required": true,
+            "type": "string",
+            "format": "string",
+            "default": "Auto"
+        },
+        "requestBody": {
+            "properties": {
+                "HolidayScheme": {
+                    "properties": {
+                        "AccrualPayCodes": {
+                            "description": "The holiday schemes' accrual pay codes",
+                            "properties": {
+                                "PayCode": {
+                                    "items": {
+                                        "type": "string"
+                                    },
+                                    "type": "array"
+                                }
+                            },
+                            "title": "AccrualPayCodes",
+                            "type": "object"
+                        },
+                        "AllowNegativeBalance": {
+                            "description": "The holiday schemes' allow negative balance",
+                            "title": "AllowNegativeBalance",
+                            "type": "boolean"
+                        },
+                        "AnnualEntitlementWeeks": {
+                            "description": "The holiday schemes' annual entitlement weeks",
+                            "format": "double",
+                            "title": "AnnualEntitlementWeeks",
+                            "type": "number"
+                        },
+                        "BankHolidayInclusive": {
+                            "description": "The holiday schemes' bank holiday inclusive",
+                            "title": "BankHolidayInclusive",
+                            "type": "boolean"
+                        },
+                        "Code": {
+                            "description": "The holiday schemes' code",
+                            "title": "Code",
+                            "type": "string"
+                        },
+                        "EffectiveDate": {
+                            "description": "The holiday schemes' effective date",
+                            "format": "date",
+                            "title": "EffectiveDate",
+                            "type": "string"
+                        },
+                        "MaxCarryOverDays": {
+                            "description": "The holiday schemes' max carry over days",
+                            "format": "double",
+                            "title": "MaxCarryOverDays",
+                            "type": "number"
+                        },
+                        "Revision": {
+                            "description": "The holiday schemes' revision",
+                            "format": "int32",
+                            "title": "Revision",
+                            "type": "integer"
+                        },
+                        "SchemeCeasedDate": {
+                            "description": "The holiday schemes' scheme ceased date",
+                            "format": "date",
+                            "title": "SchemeCeasedDate",
+                            "type": "string"
+                        },
+                        "SchemeKey": {
+                            "description": "The holiday schemes' scheme key",
+                            "title": "SchemeKey",
+                            "type": "string"
+                        },
+                        "SchemeName": {
+                            "description": "The holiday schemes' scheme name",
+                            "title": "SchemeName",
+                            "type": "string"
+                        },
+                        "YearStartDay": {
+                            "description": "The holiday schemes' year start day",
+                            "format": "int32",
+                            "title": "YearStartDay",
+                            "type": "integer"
+                        },
+                        "YearStartMonth": {
+                            "description": "The holiday schemes' year start month",
+                            "format": "int32",
+                            "title": "YearStartMonth",
+                            "type": "integer"
+                        }
+                    },
+                    "title": "HolidayScheme",
+                    "type": "object"
+                }
+            },
+            "type": "object",
+            "xml": {
+                "name": "HolidayScheme"
+            }
+        },
+        "Api_Version": {
+            "required": true,
+            "type": "string",
+            "format": "string",
+            "default": "default"
+        }
+    }
+}

@@ -1,0 +1,185 @@
+{
+    "type": "object",
+    "properties": {
+        "Authorization": {
+            "required": true,
+            "type": "string",
+            "format": "string",
+            "default": "Auto"
+        },
+        "requestBody": {
+            "properties": {
+                "Query": {
+                    "properties": {
+                        "Groups": {
+                            "description": "The querys' groups",
+                            "properties": {
+                                "Group": {
+                                    "items": {
+                                        "properties": {
+                                            "@GroupName": {
+                                                "description": "The entity groups' group name",
+                                                "title": "@GroupName",
+                                                "type": "string"
+                                            },
+                                            "@ItemName": {
+                                                "description": "The entity groups' item name",
+                                                "title": "@ItemName",
+                                                "type": "string"
+                                            },
+                                            "@LoopExpression": {
+                                                "description": "The entity groups' loop expression",
+                                                "title": "@LoopExpression",
+                                                "type": "string"
+                                            },
+                                            "@Selector": {
+                                                "description": "The entity groups' selector",
+                                                "title": "@Selector",
+                                                "type": "string"
+                                            },
+                                            "@UniqueKeyVariable": {
+                                                "description": "The entity groups' unique key variable",
+                                                "title": "@UniqueKeyVariable",
+                                                "type": "string"
+                                            },
+                                            "Condition": {
+                                                "description": "The entity groups' conditions",
+                                                "items": {
+                                                    "properties": {
+                                                        "@ValueA": {
+                                                            "description": "The compare condition bases' value a",
+                                                            "title": "@ValueA",
+                                                            "type": "string"
+                                                        },
+                                                        "@ValueB": {
+                                                            "description": "The compare condition bases' value b",
+                                                            "title": "@ValueB",
+                                                            "type": "string"
+                                                        }
+                                                    },
+                                                    "type": "object"
+                                                },
+                                                "title": "Condition",
+                                                "type": "array"
+                                            },
+                                            "Filter": {
+                                                "description": "The entity groups' filters",
+                                                "items": {
+                                                    "properties": {
+                                                        "@Property": {
+                                                            "description": "The filter bases' property",
+                                                            "title": "@Property",
+                                                            "type": "string"
+                                                        },
+                                                        "@Value": {
+                                                            "description": "The filter bases' value",
+                                                            "title": "@Value",
+                                                            "type": "string"
+                                                        }
+                                                    },
+                                                    "type": "object"
+                                                },
+                                                "title": "Filter",
+                                                "type": "array"
+                                            },
+                                            "Order": {
+                                                "description": "The entity groups' ordering",
+                                                "items": {
+                                                    "properties": {
+                                                        "@Property": {
+                                                            "description": "The order by bases' property",
+                                                            "title": "@Property",
+                                                            "type": "string"
+                                                        }
+                                                    },
+                                                    "type": "object"
+                                                },
+                                                "title": "Order",
+                                                "type": "array"
+                                            },
+                                            "Output": {
+                                                "description": "The entity groups' outputs",
+                                                "items": {
+                                                    "properties": {
+                                                        "@MaxLength": {
+                                                            "description": "The output bases' max length",
+                                                            "title": "@MaxLength",
+                                                            "type": "string"
+                                                        },
+                                                        "@Output": {
+                                                            "description": "The output bases' output",
+                                                            "enum": [
+                                                                "Element",
+                                                                "Attribute",
+                                                                "Variable",
+                                                                "VariableSum",
+                                                                "VariableAppend",
+                                                                "VariablePrepend",
+                                                                "ElementDatePart"
+                                                            ],
+                                                            "title": "@Output",
+                                                            "type": "string"
+                                                        }
+                                                    },
+                                                    "type": "object"
+                                                },
+                                                "title": "Output",
+                                                "type": "array"
+                                            }
+                                        },
+                                        "type": "object"
+                                    },
+                                    "type": "array"
+                                }
+                            },
+                            "title": "Group",
+                            "type": "object"
+                        },
+                        "RootNodeName": {
+                            "description": "The querys' root node name",
+                            "title": "RootNodeName",
+                            "type": "string"
+                        },
+                        "Variables": {
+                            "description": "The querys' variables",
+                            "properties": {
+                                "Variable": {
+                                    "items": {
+                                        "properties": {
+                                            "@Name": {
+                                                "description": "The name value pairs' name",
+                                                "title": "@Name",
+                                                "type": "string"
+                                            },
+                                            "@Value": {
+                                                "description": "The name value pairs' value",
+                                                "title": "@Value",
+                                                "type": "string"
+                                            }
+                                        },
+                                        "type": "object"
+                                    },
+                                    "type": "array"
+                                }
+                            },
+                            "title": "Variable",
+                            "type": "object"
+                        }
+                    },
+                    "title": "Query",
+                    "type": "object"
+                }
+            },
+            "type": "object",
+            "xml": {
+                "name": "Query"
+            }
+        },
+        "Api_Version": {
+            "required": true,
+            "type": "string",
+            "format": "string",
+            "default": "default"
+        }
+    }
+}

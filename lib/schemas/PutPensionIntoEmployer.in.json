@@ -1,0 +1,200 @@
+{
+    "type": "object",
+    "properties": {
+        "EmployerId": {
+            "required": true,
+            "type": "string"
+        },
+        "PensionId": {
+            "required": true,
+            "type": "string"
+        },
+        "Authorization": {
+            "required": true,
+            "type": "string",
+            "format": "string",
+            "default": "Auto"
+        },
+        "requestBody": {
+            "properties": {
+                "Pension": {
+                    "properties": {
+                        "AECompatible": {
+                            "description": "The pensions' a e compatible",
+                            "title": "AECompatible",
+                            "type": "boolean"
+                        },
+                        "Code": {
+                            "description": "The pensions' code",
+                            "title": "Code",
+                            "type": "string"
+                        },
+                        "ContributionDeductionDay": {
+                            "description": "The pensions' contribution deduction day",
+                            "format": "int32",
+                            "title": "ContributionDeductionDay",
+                            "type": "integer"
+                        },
+                        "EffectiveDate": {
+                            "description": "The pensions' effective date",
+                            "format": "date",
+                            "title": "EffectiveDate",
+                            "type": "string"
+                        },
+                        "EmployeeContributionCash": {
+                            "description": "The pensions' employee contribution cash",
+                            "format": "double",
+                            "title": "EmployeeContributionCash",
+                            "type": "number"
+                        },
+                        "EmployeeContributionPercent": {
+                            "description": "The pensions' employee contribution percent",
+                            "format": "double",
+                            "title": "EmployeeContributionPercent",
+                            "type": "number"
+                        },
+                        "EmployerContributionCash": {
+                            "description": "The pensions' employer contribution cash",
+                            "format": "double",
+                            "title": "EmployerContributionCash",
+                            "type": "number"
+                        },
+                        "EmployerContributionPercent": {
+                            "description": "The pensions' employer contribution percent",
+                            "format": "double",
+                            "title": "EmployerContributionPercent",
+                            "type": "number"
+                        },
+                        "Group": {
+                            "description": "The pensions' group",
+                            "title": "Group",
+                            "type": "string"
+                        },
+                        "LowerThreshold": {
+                            "description": "The pensions' lower threshold",
+                            "format": "double",
+                            "title": "LowerThreshold",
+                            "type": "number"
+                        },
+                        "PensionablePayCodes": {
+                            "description": "The pensions' pensionable pay codes",
+                            "properties": {
+                                "PayCode": {
+                                    "items": {
+                                        "type": "string"
+                                    },
+                                    "type": "array"
+                                }
+                            },
+                            "title": "PensionablePayCodes",
+                            "type": "object"
+                        },
+                        "ProRataMethod": {
+                            "description": "The pensions' pro rata method",
+                            "enum": [
+                                "NotSet",
+                                "Annual260Days",
+                                "Annual365Days",
+                                "AnnualQualifyingDays",
+                                "DaysPerCalendarMonth",
+                                "DaysPerTaxPeriod"
+                            ],
+                            "title": "ProRataMethod",
+                            "type": "string"
+                        },
+                        "ProviderEmployerRef": {
+                            "description": "The pensions' provider employer ref",
+                            "title": "ProviderEmployerRef",
+                            "type": "string"
+                        },
+                        "ProviderName": {
+                            "description": "The pensions' provider name",
+                            "title": "ProviderName",
+                            "type": "string"
+                        },
+                        "QualifyingPayCodes": {
+                            "description": "The pensions' qualifying pay codes",
+                            "properties": {
+                                "PayCode": {
+                                    "items": {
+                                        "type": "string"
+                                    },
+                                    "type": "array"
+                                }
+                            },
+                            "title": "QualifyingPayCodes",
+                            "type": "object"
+                        },
+                        "Revision": {
+                            "description": "The pensions' revision",
+                            "format": "int32",
+                            "title": "Revision",
+                            "type": "integer"
+                        },
+                        "RoundingOption": {
+                            "description": "The pensions' rounding option",
+                            "enum": [
+                                "NotSet",
+                                "PennyUp",
+                                "PennyDown",
+                                "Bankers",
+                                "FiveUp",
+                                "FiveDown"
+                            ],
+                            "title": "RoundingOption",
+                            "type": "string"
+                        },
+                        "SalarySacrifice": {
+                            "description": "The pensions' salary sacrifice",
+                            "title": "SalarySacrifice",
+                            "type": "boolean"
+                        },
+                        "SchemeName": {
+                            "description": "The pensions' scheme name",
+                            "title": "SchemeName",
+                            "type": "string"
+                        },
+                        "SubGroup": {
+                            "description": "The pensions' sub group",
+                            "title": "SubGroup",
+                            "type": "string"
+                        },
+                        "TaxationMethod": {
+                            "description": "The pensions' taxation method",
+                            "enum": [
+                                "NotSet",
+                                "NetBased",
+                                "ReliefAtSource"
+                            ],
+                            "title": "TaxationMethod",
+                            "type": "string"
+                        },
+                        "UpperThreshold": {
+                            "description": "The pensions' upper threshold",
+                            "format": "double",
+                            "title": "UpperThreshold",
+                            "type": "number"
+                        },
+                        "UseAEThresholds": {
+                            "description": "The pensions' use a e thresholds",
+                            "title": "UseAEThresholds",
+                            "type": "boolean"
+                        }
+                    },
+                    "title": "Pension",
+                    "type": "object"
+                }
+            },
+            "type": "object",
+            "xml": {
+                "name": "Pension"
+            }
+        },
+        "Api_Version": {
+            "required": true,
+            "type": "string",
+            "format": "string",
+            "default": "default"
+        }
+    }
+}

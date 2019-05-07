@@ -1,0 +1,65 @@
+{
+    "type": "object",
+    "properties": {
+        "EmployerId": {
+            "required": true,
+            "type": "string"
+        },
+        "EmployeeId": {
+            "required": true,
+            "type": "string"
+        },
+        "PayInstructionId": {
+            "required": true,
+            "type": "string"
+        },
+        "Authorization": {
+            "required": true,
+            "type": "string",
+            "format": "string",
+            "default": "Auto"
+        },
+        "requestBody": {
+            "properties": {
+                "PayInstruction": {
+                    "properties": {
+                        "Description": {
+                            "description": "The pay instructions' description",
+                            "title": "Description",
+                            "type": "string"
+                        },
+                        "EndDate": {
+                            "description": "The pay instructions' end date",
+                            "format": "date",
+                            "title": "EndDate",
+                            "type": "string"
+                        },
+                        "PayLineTag": {
+                            "description": "The pay instructions' pay line tag",
+                            "title": "PayLineTag",
+                            "type": "string"
+                        },
+                        "StartDate": {
+                            "description": "The pay instructions' start date",
+                            "format": "date",
+                            "title": "StartDate",
+                            "type": "string"
+                        }
+                    },
+                    "title": "PayInstruction",
+                    "type": "object"
+                }
+            },
+            "type": "object",
+            "xml": {
+                "name": "PayInstruction"
+            }
+        },
+        "Api_Version": {
+            "required": true,
+            "type": "string",
+            "format": "string",
+            "default": "default"
+        }
+    }
+}
